@@ -1,0 +1,100 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+
+{% block head %}
+  <style type="text/css">
+    section, aside{
+      float: left;
+    }
+
+    section {
+      width: 60%;
+    }
+    aside {
+      width: 20%;
+    }
+    .message{
+      text-align: center;
+      margin: 45px;
+    }
+  </style>
+{% endblock %}
+
+
+{% block main %}
+<aside>
+  <p></p>
+</aside>
+<section>
+  <div class="message"><h2>공연 상세정보</h2></div>
+  <div class='col-md themed-grid-col'>
+    <div class="bg-light p-3 rounded" >
+      {% for data in performance %}
+      <h1>[{{ data.genre }}] {{ data.title }}</h1>
+      <p>{{ data.date }}</p>
+      {% endfor %}
+    </div>
+    <hr class="my-4">
+    
+    <div class="row mb-3">
+      <div class="col-md-5 themed-grid-col">
+
+        <img src="{{ performance.0.image.url }}" width='auto' height='400px'>
+      </div>
+      <div class="col-md">
+        <div class="row mb-10">
+          <div class="col-md-3">
+            <p>등급</p>
+            <p>관람시간</p>
+            <p>출연</p>
+            <p>가격</p>
+          </div>
+      {% for data in performance_detail %}
+          <div class="col-md">
+            <p>{{ data.ageGroup }}</p>
+            <p>{{ data.viewingTime }}</p>
+            <p>{{ performance.0.member }}</p>
+            <div class="price_box bg-light">
+              <p>&nbsp;VIP석&nbsp;&nbsp;{{ data.priceVIP }}원</p>
+              <p>&nbsp;R석&nbsp;&nbsp;{{ data.priceR }}원</p>
+              <p>&nbsp;S석&nbsp;&nbsp;{{ data.priceS }}원</p>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="col-md">
+          <div class="row mb-10">
+            <div class="col-md-3">
+              <p>시간 안내</p>
+              <p>장소 안내</p>
+              <p>티켓 배송 안내</p>
+            </div>
+            <div class="col-md">
+              <p>{{ data.info_time }}</p>
+              <p>{{ performance.0.location }}</p>
+              <p>{{ data.info_delivery }}</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        {% if error %}
+        <a class="1btn btn-lg btn-primary" href="{% url 'category:detail' title=data.title_id %}" role="button" >좌석선택</a>
+        {% else %}
+        <a class="1btn btn-lg btn-primary" href="{% url 'category:select_seat' title=data.title_id %}" role="button" >좌석선택</a>
+        {% endif %}
+        <span style="color: red;">&nbsp;&nbsp;&nbsp;{{ error }}</span> <!-- &nbsp; 는 공백-->
+        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </section>
+  <aside>
+    <p></p>
+  </aside>
+  {% endblock %}

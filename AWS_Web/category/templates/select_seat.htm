@@ -1,0 +1,64 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/select_seat.css' %}">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+{% endblock %}
+
+{% block main %}
+<!-- Author information
+* html, php, css, javascript
+*   written by hepheir@gmail.com
+*
+
+* site designed by
+*   dfc7936@naver.com & hepheir@gmail.com
+*
+-->
+
+<div id="bodyWrap">
+  <div id="stageWrap">
+      <form class="" action="{% url 'category:reserved' title=performance.0.title %}" method="post">
+        {% csrf_token %}
+        <div class="p-3 container rounded">
+          {% for data in performance %}
+          <h2>좌석선택</h2>
+          <h1>[{{ data.genre}}] {{ data.title }}</h1>
+          <p class="lead">공연일시 : {{ data.date }}</p>
+         {% endfor %} 
+        </div>
+        <br>
+      <h1 class="stage container" style="width: 50%; padding: 20px; background-color: green; color:white ">stage</h1>
+      <br>
+      <br>
+      <div id="stageTable">
+        <table>
+          <script>
+            // 가로 : 행
+            // 세로 : 열
+            var cols = 30; //행
+            var rows = 10; //열
+            var i = 0;
+            var j = 1;
+            var c = String.fromCharCode(i + 65);
+
+            while (i < rows) {
+              document.write('<tr>');
+              while (j <= cols) {
+                document.write('<td class="cell" style="border: 1px solid black; text-align: center"><input type="radio" id="seat_' + c + j + '" class="hidden" name="seat" value="' + c + ':' + j + '"/><label for="seat_' + c + j + '" class="cell">' + c + j + '</label></td>');
+                j++;
+              }
+              document.write('</tr>');
+              j = 1;
+              i++;
+              c = String.fromCharCode(i + 65);
+            }
+          </script>
+        </table>
+        <input id="done" name="part" class="hidden" type="submit" />
+        <label class="console_2" for="done"><strong>예매하기</strong></label>
+      </form>
+    </div>
+</div>
+{% endblock %}

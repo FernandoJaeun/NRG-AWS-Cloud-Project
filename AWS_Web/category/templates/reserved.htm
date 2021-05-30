@@ -1,0 +1,76 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+{% block head %}
+<style type="text/css">
+  section, aside{
+    float: left;
+  }
+
+  section {
+    width: 60%;
+  }
+  aside {
+    width: 20%;
+  }
+  
+  .accent{
+    color: red;
+  }
+  .message{
+    text-align: center;
+    margin: 45px;
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<aside>
+  <p></p>
+</aside>
+
+<section>
+  <div class="message"><h2>예매 완료</h2></div>
+  <hr class="my-4">
+  <div class='col-md themed-grid-col'>
+    <div class="bg-light p-5 rounded">
+      {% for data in performance %}
+      <h1>[{{ data.genre }}] {{ data.title }}</h1>
+      <br>
+      <p class="lead">공연일시 : {{ data.date }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row mb-10" style="padding: 20 15;">
+      <div class="col-md-5">
+        <div class="row mb-10 bg-light">
+          <div class="col-md-4">
+            <p>구매자명</p>
+            <p>좌석번호</p>
+            <p>시간안내</p>
+            <p>장소안내</p>
+            <p>티켓 배송안내</p>
+          </div>
+          <div class="col-md">
+            <p class="accent"> {{ user_id }}</p>
+            <p class="accent"> {{ reserved.0 }}열 {{ reserved.1 }}번</p>
+            <p>{{ performance_detail.0.info_time }}</p>
+            <p>{{ performance.0.location }}</p>
+            <p>{{ performance_detail.0.info_delivery }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <br>
+ <br>
+ <br>
+ <br>
+</section>
+
+<aside>
+  <p></p>
+</aside>
+
+{% endblock %}

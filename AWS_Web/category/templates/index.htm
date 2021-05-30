@@ -1,0 +1,99 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+{% block head %} 
+{% endblock %}
+
+{% block main %}
+  <main>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- if 상영날짜 <= today + 20일 = 개봉예정-->
+    <!-- if 상영날짜 == today 상영중-->
+    <br>
+    <br>
+    <br>
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <h1 class="content_head text-center">진행중인 공연</h2>
+      </div>
+      <div class="row" style="text-align: center;">
+        
+        {% for per in performance %}
+        <div class="col-lg-6" style="padding: 50px 10px;" >
+          <a href="{% url 'category:detail' title=per.title %}"><img src="{{ per.image.url }}" width='auto' height='400px'></a>
+          <h4>[{{per.genre|default:'미정'}}] {{per.title}}</h4>
+          <span class="text-muted">{{ per.date }} <br> {{per.location}}</span>
+          <p class="lead">출연진 : {{ per.member }}</p>
+          <span class="text-muted">{{ per.overview }}</span><p></p>
+          <p><a class="btn btn-secondary" href="{% url 'category:detail' title=per.title %}">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        {% endfor %}
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <h1 class="content_head text-center">예정 공연</h2>
+              
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h3 class="featurette-heading">[페스티벌]<br> 자라섬 재즈 & 힙합 축제 </h3>
+          <span class="text-muted">2021년 8월 17일 / 강원도 - 자라섬 </span>
+          <br>
+          <p class="lead">빈지노·나윤선·전인권·더콰이엇·켄드릭 라마·콜드 플레이<br>윤딴딴·O.O.O·심현보·김필·정승환·10CM·자이언티·크러쉬·헤이즈</p>
+          <p >각 아티스트당 25분 공연. 총 2부 <br> 1부 : 오후 2시 ~ 오후 4시 <br> 2부 : 오후 6시 ~ 오후 9시</p>
+        </div>
+        <div class="col-md-5">
+          <img src="{% static 'img/zarasum.jpg' %}" width="auto" height="400px">
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-md-6 order-md-2">
+          <h3 class="featurette-heading">[페스티벌]<br> 온 가족이 즐기는 <br>경량 클래식 공연 </h3>
+          <span class="text-muted">2021년 8월 2일 / 서울 - 난지공원</span>
+          <br>
+          <p class="lead">이루마 · 전수연</p>
+          <p >이루마, 전수연의 합동 공연. 총 1부 <br> 1부 : 오후 7시 ~ 오후 9시</p>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <img src="{% static 'img/nanji.jpg' %}" width="400px" height="auto">
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h3 class="featurette-heading">[페스티벌]<br> KB와 함께하는 <br>Let's Rock 10주년 축제</h3>
+          <span class="text-muted">2021년 7월 23일 / 서울 - 난지공원</span>
+          <br>
+          <p class="lead">어반자카파·장법준·스탠딩에그·짙은·오존·제이레빗·바닐라어쿠스틱<br>윤딴딴·O.O.O·심현보·김필·정승환·10CM·자이언티·크러쉬·헤이즈<br>옥상달빛·분리수거·넬·임재범·우주소녀·볼빨간사춘기·전효성</p>
+          <p >각 아티스트당 15분씩 공연. 총 2부<br> 1부 : 오전10시 ~ 오후2시<br> 2부 : 오후3시 ~ 오후5시</p>
+        </div>
+        <div class="col-md-5">
+          <img src="{% static 'img/letsRock.jpg' %}" width="400px" height="auto">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>© 2020–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+  </main>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+{% endblock  %}

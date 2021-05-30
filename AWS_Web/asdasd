@@ -1,0 +1,31 @@
+34     upstream django {
+ 35         server unix:/root/NRG-AWS-Cloud-Project2/second_site/second_site.sock; # for a file socket
+ 36     }
+ 37
+ 38      server {
+ 39          listen       80;
+ 40          #server_name  test-808280491.ap-northeast-2.elb.amazonaws.com;
+ 41          #server_name  10.0.3.254;
+ 42          server_name  localhost;
+ 43          charset      utf-8;
+ 44          #access_log  /var/log/nginx/host.access.log  main;
+ 45
+ 46
+ 47          location / {
+ 48              #uwsgi_pass django;
+ 49              uwsgi_pass unix:/root/NRG-AWS-Cloud-Project2/second_site/second_site.sock;
+ 50              #include /root/NRG-AWS-Cloud-Project2/second_site/uwsgi_params;
+ 51              include uwsgi_params;
+ 52          }
+ 53
+ 54
+ 55          location /media/ {
+ 56              alias /root/NRG-AWS-Cloud-Project2/second_site/media/;
+ 57          }
+ 58
+ 59
+ 60          location /static/ {
+ 61              alias /root/NRG-AWS-Cloud-Project2/second_site/static/;
+ 62          }
+ 63      }
+
