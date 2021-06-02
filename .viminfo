@@ -10,27 +10,84 @@
 
 # hlsearch on (H) or off (h):
 ~H
+# Last Search Pattern:
+~MSle0~/DEBUG
+
 # Last Substitute Search Pattern:
-~MSle0~&second_site
+~MSle0&second_site
 
 # Last Substitute String:
 $myticket
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1622361960,,"wq"
-:q!
-|2,0,1622357692,,"q!"
-:q
-|2,0,1622357629,,"q"
+|2,0,1622594768,,"wq"
 :w
-|2,0,1622357103,,"w"
+|2,0,1622545575,,"w"
+:q
+|2,0,1622527150,,"q"
+:                              
+|2,0,1622542778,,"                              "
+:150
+|2,0,1622542679,,"150"
+:set nu
+|2,0,1622542677,,"set nu"
+:set nonu
+|2,0,1622542632,,"set nonu"
+:q!
+|2,0,1622535174,,"q!"
+:set no nu
+|2,0,1622532633,,"set no nu"
+:%s/Perfomance/Performance/g
+|2,0,1622530556,,"%s/Perfomance/Performance/g"
+:Wq
+|2,0,1622530298,,"Wq"
+:%s/perfomance/performance/g
+|2,0,1622530233,,"%s/perfomance/performance/g"
+:ㅈ
+|2,0,1622529304,,"ㅈ"
+:%s 154,$/access/m
+|2,0,1622527472,,"%s 154,$/access/m"
+:%s/access
+|2,0,1622527410,,"%s/access"
+:W
+|2,0,1622526586,,"W"
+:41
+|2,0,1622372313,,"41"
 :%s1
 |2,0,1622354109,,"%s1"
 :%s/second_site/myticket/g
 |2,0,1622353505,,"%s/second_site/myticket/g"
 
 # Search String History (newest to oldest):
+?/static
+|2,1,1622542981,47,"static"
+? #######################################################################
+|2,1,1622539012,,"#######################################################################"
+? \<DEFAULT_FILE_STORAGE\>
+|2,1,1622538675,,"\\<DEFAULT_FILE_STORAGE\\>"
+? \<Performance\>
+|2,1,1622532574,,"\\<Performance\\>"
+?/DEB
+|2,1,1622532400,47,"DEB"
+?/DATA
+|2,1,1622531274,47,"DATA"
+? Perfomance
+|2,1,1622530556,,"Perfomance"
+? \<PerformanceDetail\>
+|2,1,1622530526,,"\\<PerformanceDetail\\>"
+?/perfomance
+|2,1,1622530241,47,"perfomance"
+? perfomance
+|2,1,1622530233,,"perfomance"
+?/asset
+|2,1,1622526136,47,"asset"
+?/INSTALL
+|2,1,1622525619,47,"INSTALL"
+?/DEBUG
+|2,1,1622524412,47,"DEBUG"
+?/content
+|2,1,1622372311,47,"content"
 ? second_site
 |2,1,1622353505,,"second_site"
 ?/WSGI_APP
@@ -43,273 +100,456 @@ $myticket
 # Debug Line History (newest to oldest):
 
 # Registers:
+"0	CHAR	0
+	dcmgpjk4o0sdu.cloudfront.net
+|3,0,0,0,1,0,1622536367,"dcmgpjk4o0sdu.cloudfront.net"
 "1	LINE	0
-	10.0.3.254	ticket-was1
-|3,0,1,1,1,0,1622357688,"10.0.3.254	ticket-was1"
+	    MEDIA_URL = f'https://{AWS_CLOUDFRONT_URL}/media'   # s3가 참조할 django의 media 디렉터리 경로
+|3,0,1,1,1,0,1622545433,"    MEDIA_URL = f'https://{AWS_CLOUDFRONT_URL}/media'   # s3가 참조할 django의 media 디렉터리 경로"
 "2	LINE	0
-	
-|3,0,2,1,1,0,1622354293,""
+	    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+|3,0,2,1,1,0,1622545412,"    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'"
 "3	LINE	0
-	username = ex2-user
-|3,0,3,1,1,0,1622354289,"username = ex2-user"
+	    #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+|3,0,3,1,1,0,1622545399,"    #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'"
 "4	LINE	0
-	
-|3,0,4,1,1,0,1622354284,""
+	    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+|3,0,4,1,1,0,1622545397,"    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'"
 "5	LINE	0
-	base = /home/%(username)
-|3,0,5,1,1,0,1622354274,"base = /home/%(username)"
+	
+|3,0,5,1,1,0,1622542717,""
 "6	LINE	0
-	username = ex2-user
-|3,0,6,1,1,0,1622354168,"username = ex2-user"
+	
+|3,0,6,1,1,0,1622542702,""
+"7	LINE	0
+	
+|3,0,7,1,1,0,1622542701,""
+"8	LINE	0
+	MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # myticket/media
+|3,0,8,1,1,0,1622542700,"MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # myticket/media"
+"9	LINE	0
+	    
+	#################### S3 설정을 위한 변수 ##############################
+	# AWS_xxx 의 변수들은 aws-S3, boto3 모듈을 위한 변수들이다.
+	from . import aws_access_tools as access
+	
+	# 버킷 접속 권한 설정
+	AWS_ACCESS_KEY_ID = access.KEY_ID
+	AWS_SECRET_ACCESS_KEY = access.SECRET_KEY
+	AWS_REGION = access.AWS_REGION
+	AWS_STORAGE_BUCKET_NAME = access.AWS_BUCKET 
+	#AWS_S3_CUSTOM_DOMAIN = f'{access.AWS_BUCKET}.s3.{access.AWS_REGION}.amazonaws.com'
+	AWS_S3_CUSTOM_DOMAIN = 'dcmgpjk4o0sdu.cloudfront.net'
+	
+	# S3의 캐시 유통기한
+	AWS_S3_OBJECT_PARAMETERS = {    
+	    'CacheControl': 'max-age=86400',
+	}   
+	
+	# Data 업로드 크기 제한
+	DATA_UPLOAD_MAX_MEMORY_SIZE = 1024000000 # 1GB 
+	FILE_UPLOAD_MAX_MEMORY_SIZE = 1024000000
+	
+	# static, media 파일 설정
+	STATIC_URL = 'https://dcmgpjk4o0sdu.cloudfront.net/static/' # s3가 참조할 django의 static 디렉터리 경로
+	STATICFILES_STORAGE = 'myticket.asset_storage.S3StaticStorage'
+	#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+	#MEDIA_URL = 'https://dcmgpjk4o0sdu.cloudfront.net/media/'   # s3가 참조할 django의 media 디렉터리 경로
+	DEFAULT_FILE_STORAGE = 'myticket.asset_storage.S3DefaultStorage'
+	#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+	#######################################################################
+	
+	
+	############### DynamoDB-Session 설정을 위한 변수 #####################
+	DYNAMODB_SESSIONS_AWS_REGION_NAME='ap-northeast-2'
+	DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = access.KEY_ID
+	DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = access.SECRET_KEY
+	SESSION_ENGINE = 'dynamodb_sessions.backends.dynamodb' # Django에  캐시를 안 만듦
+	
+	SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+	DYNAMODB_SESSIONS_TABLE_NAME='myticket_sessions'
+	DYNAMODB_SESSIONS_TABLE_HASH_ATTRIB_NAME='session_key'
+	DYNAMODB_SESSIONS_ALWAYS_CONSISTENT=True
+	DYNAMODB_SESSIONS_BOTO_SESSION='boto3.session.Session'
+	#######################################################################
+	
+	
+	#STATIC_URL = '/static/'  # s3가 참조할 django의 static 디렉터리 경로
+	STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+	
+	#MEDIA_URL = '/media/'   # s3가 참조할 django의 media 디렉터리 경로
+|3,0,9,1,50,0,1622542700,"    ","#################### S3 설정을 위한 변수 ##############################","# AWS_xxx 의 변수들은 aws-S3, boto3 모듈을 위한 변수들이다.","from . import aws_access_tools as access","","# 버킷 접속 권한 설정","AWS_ACCESS_KEY_ID = access.KEY_ID","AWS_SECRET_ACCESS_KEY = access.SECRET_KEY","AWS_REGION = access.AWS_REGION","AWS_STORAGE_BUCKET_NAME = access.AWS_BUCKET ",>85
+|<"#AWS_S3_CUSTOM_DOMAIN = f'{access.AWS_BUCKET}.s3.{access.AWS_REGION}.amazonaws.com'","AWS_S3_CUSTOM_DOMAIN = 'dcmgpjk4o0sdu.cloudfront.net'","","# S3의 캐시 유통기한","AWS_S3_OBJECT_PARAMETERS = {    ","    'CacheControl': 'max-age=86400',","}   ","","# Data 업로드 크기 제한","DATA_UPLOAD_MAX_MEMORY_SIZE = 1024000000 # 1GB ","FILE_UPLOAD_MAX_MEMORY_SIZE = 1024000000","","# static, media 파일 설정",>116
+|<"STATIC_URL = 'https://dcmgpjk4o0sdu.cloudfront.net/static/' # s3가 참조할 django의 static 디렉터리 경로","STATICFILES_STORAGE = 'myticket.asset_storage.S3StaticStorage'","#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'","#MEDIA_URL = 'https://dcmgpjk4o0sdu.cloudfront.net/media/'   # s3가 참조할 django의 media 디렉터리 경로","DEFAULT_FILE_STORAGE = 'myticket.asset_storage.S3DefaultStorage'",>68
+|<"#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'","#######################################################################","","","############### DynamoDB-Session 설정을 위한 변수 #####################","DYNAMODB_SESSIONS_AWS_REGION_NAME='ap-northeast-2'","DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = access.KEY_ID","DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = access.SECRET_KEY","SESSION_ENGINE = 'dynamodb_sessions.backends.dynamodb' # Django에  캐시를 안 만듦",>2
+|<"","SESSION_EXPIRE_AT_BROWSER_CLOSE=True","DYNAMODB_SESSIONS_TABLE_NAME='myticket_sessions'","DYNAMODB_SESSIONS_TABLE_HASH_ATTRIB_NAME='session_key'","DYNAMODB_SESSIONS_ALWAYS_CONSISTENT=True","DYNAMODB_SESSIONS_BOTO_SESSION='boto3.session.Session'","#######################################################################","","","#STATIC_URL = '/static/'  # s3가 참조할 django의 static 디렉터리 경로","STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]","",>80
+|<"#MEDIA_URL = '/media/'   # s3가 참조할 django의 media 디렉터리 경로"
 ""-	CHAR	0
-	_
-|3,1,36,0,1,0,1622361852,"_"
+	 
+|3,1,36,0,1,0,1622545566," "
 
 # File marks:
-'0  23  37  ~/AWS_Web/users/views.py
-|4,48,23,37,1622361960,"~/AWS_Web/users/views.py"
-'1  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,49,9,0,1622357789,"~/AWS_Web/myticket_uwsgi.ini"
-'2  2  0  /etc/hosts
-|4,50,2,0,1622357692,"/etc/hosts"
-'3  1  0  /etc/hosts
-|4,51,1,0,1622357629,"/etc/hosts"
-'4  1  0  /etc/hosts
-|4,52,1,0,1622357629,"/etc/hosts"
-'5  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,53,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
-'6  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,54,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
-'7  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,55,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
-'8  1  0  /var/log/nginx/error.log
-|4,56,1,0,1622356870,"/var/log/nginx/error.log"
-'9  181  19  ~/AWS_Web/myticket/settings.py
-|4,57,181,19,1622356364,"~/AWS_Web/myticket/settings.py"
+'0  3  35  ~/.gitignore
+|4,48,3,35,1622594768,"~/.gitignore"
+'1  202  0  ~/AWS_Web/myticket/settings.py
+|4,49,202,0,1622545631,"~/AWS_Web/myticket/settings.py"
+'2  4  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,50,4,0,1622545335,"~/AWS_Web/myticket/aws_access_tools.py"
+'3  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,51,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+'4  163  4  ~/AWS_Web/myticket/settings.py
+|4,52,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+'5  163  4  ~/AWS_Web/myticket/settings.py
+|4,53,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+'6  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,54,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+'7  6  53  ~/AWS_Web/myticket/secrets/secret.json
+|4,55,6,53,1622544296,"~/AWS_Web/myticket/secrets/secret.json"
+'8  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,56,10,29,1622544293,"~/AWS_Web/myticket/asset_storage.py"
+'9  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,57,10,29,1622544293,"~/AWS_Web/myticket/asset_storage.py"
 
 # Jumplist (newest first):
--'  23  37  ~/AWS_Web/users/views.py
-|4,39,23,37,1622361960,"~/AWS_Web/users/views.py"
--'  1  0  ~/AWS_Web/users/views.py
-|4,39,1,0,1622361824,"~/AWS_Web/users/views.py"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357789,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357789,"~/AWS_Web/myticket_uwsgi.ini"
--'  2  0  /etc/hosts
-|4,39,2,0,1622357692,"/etc/hosts"
--'  2  0  /etc/hosts
-|4,39,2,0,1622357692,"/etc/hosts"
--'  1  0  /etc/hosts
-|4,39,1,0,1622357660,"/etc/hosts"
--'  1  0  /etc/hosts
-|4,39,1,0,1622357660,"/etc/hosts"
--'  1  0  /etc/hosts
-|4,39,1,0,1622357629,"/etc/hosts"
--'  1  0  /etc/hosts
-|4,39,1,0,1622357629,"/etc/hosts"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  9  0  ~/AWS_Web/myticket_uwsgi.ini
-|4,39,9,0,1622357159,"~/AWS_Web/myticket_uwsgi.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  37  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,37,1622357128,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  12  41  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,12,41,1622357028,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  ~/AWS_Web/myticket_uwsgi2.ini
-|4,39,1,0,1622356994,"~/AWS_Web/myticket_uwsgi2.ini"
--'  1  0  /var/log/nginx/error.log
-|4,39,1,0,1622356870,"/var/log/nginx/error.log"
--'  1  0  /var/log/nginx/error.log
-|4,39,1,0,1622356870,"/var/log/nginx/error.log"
+-'  3  35  ~/.gitignore
+|4,39,3,35,1622594768,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1622594763,"~/.gitignore"
+-'  202  0  ~/AWS_Web/myticket/settings.py
+|4,39,202,0,1622545631,"~/AWS_Web/myticket/settings.py"
+-'  202  0  ~/AWS_Web/myticket/settings.py
+|4,39,202,0,1622545631,"~/AWS_Web/myticket/settings.py"
+-'  175  55  ~/AWS_Web/myticket/settings.py
+|4,39,175,55,1622545562,"~/AWS_Web/myticket/settings.py"
+-'  175  55  ~/AWS_Web/myticket/settings.py
+|4,39,175,55,1622545562,"~/AWS_Web/myticket/settings.py"
+-'  184  4  ~/AWS_Web/myticket/settings.py
+|4,39,184,4,1622545411,"~/AWS_Web/myticket/settings.py"
+-'  180  4  ~/AWS_Web/myticket/settings.py
+|4,39,180,4,1622545411,"~/AWS_Web/myticket/settings.py"
+-'  184  4  ~/AWS_Web/myticket/settings.py
+|4,39,184,4,1622545411,"~/AWS_Web/myticket/settings.py"
+-'  180  4  ~/AWS_Web/myticket/settings.py
+|4,39,180,4,1622545411,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545336,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545336,"~/AWS_Web/myticket/settings.py"
+-'  4  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,4,0,1622545335,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  4  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,4,0,1622545335,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  4  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,4,0,1622545335,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  4  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,4,0,1622545335,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  3  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,3,0,1622545332,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  3  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,3,0,1622545332,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  3  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,3,0,1622545332,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  3  0  ~/AWS_Web/myticket/aws_access_tools.py
+|4,39,3,0,1622545332,"~/AWS_Web/myticket/aws_access_tools.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  8  10  ~/AWS_Web/myticket/asset_storage.py
+|4,39,8,10,1622545327,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  10  29  ~/AWS_Web/myticket/asset_storage.py
+|4,39,10,29,1622545326,"~/AWS_Web/myticket/asset_storage.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  163  4  ~/AWS_Web/myticket/settings.py
+|4,39,163,4,1622545321,"~/AWS_Web/myticket/settings.py"
+-'  185  4  ~/AWS_Web/myticket/settings.py
+|4,39,185,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  185  4  ~/AWS_Web/myticket/settings.py
+|4,39,185,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  178  4  ~/AWS_Web/myticket/settings.py
+|4,39,178,4,1622545291,"~/AWS_Web/myticket/settings.py"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  4  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,4,0,1622545280,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
+-'  29  0  ~/AWS_Web/myticket_uwsgi.ini
+|4,39,29,0,1622545220,"~/AWS_Web/myticket_uwsgi.ini"
 
 # History of marks within files (newest to oldest):
 
-> ~/AWS_Web/users/views.py
-	*	1622361958	0
-	"	23	37
-	^	23	38
-	.	23	37
-	+	22	43
-	+	23	37
+> ~/.gitignore
+	*	1622594767	0
+	"	3	35
+	^	3	36
+	.	3	35
+	+	3	35
 
-> /etc/hosts
-	*	1622357689	0
-	"	2	0
+> ~/AWS_Web/myticket/settings.py
+	*	1622545618	0
+	"	202	0
+	^	187	0
+	.	189	54
+	+	159	3
+	+	160	4
+	+	161	4
+	+	162	4
+	+	163	0
+	+	166	0
+	+	164	0
+	+	166	0
+	+	167	0
+	+	168	0
+	+	171	0
+	+	172	0
+	+	170	0
+	+	172	0
+	+	174	0
+	+	175	0
+	+	179	0
+	+	180	0
+	+	185	0
+	+	188	0
+	+	189	0
+	+	190	0
+	+	191	0
+	+	192	0
+	+	194	0
+	+	195	0
+	+	196	0
+	+	197	0
+	+	198	0
+	+	199	0
+	+	202	0
+	+	203	0
+	+	205	0
+	+	204	0
+	+	205	3
+	+	204	3
+	+	203	3
+	+	202	3
+	+	199	3
+	+	198	3
+	+	197	3
+	+	196	3
+	+	195	3
+	+	194	3
+	+	192	3
+	+	191	3
+	+	190	3
+	+	189	3
+	+	188	3
+	+	185	3
+	+	180	3
+	+	179	3
+	+	175	3
+	+	174	3
+	+	172	3
+	+	171	3
+	+	170	3
+	+	168	3
+	+	167	4
+	+	166	3
+	+	164	3
+	+	163	3
+	+	151	47
+	+	148	4
+	+	149	49
+	+	175	55
+	+	179	4
+	+	180	4
+	+	180	54
+	+	180	4
+	+	185	4
+	+	175	60
+	+	180	58
+	+	179	4
+	+	180	4
+	+	185	4
+	+	163	51
+	+	175	45
+	+	180	0
+	+	183	0
+	+	182	22
+	+	180	0
+	+	176	0
+	+	174	63
+	+	178	62
+	+	175	48
+	+	176	47
+	+	175	0
+	+	176	55
+	+	169	0
+	+	165	0
+	+	189	54
+
+> ~/AWS_Web/myticket/aws_access_tools.py
+	*	1622545334	0
+	"	4	0
+	^	3	0
 	.	3	0
+	+	1	31
 	+	3	0
 
+> ~/AWS_Web/myticket/asset_storage.py
+	*	1622545327	0
+	"	8	10
+	^	10	30
+	.	10	29
+	+	18	38
+	+	18	22
+	+	18	6
+	+	18	0
+	+	18	3
+	+	18	17
+	+	18	16
+	+	18	0
+	+	16	22
+	+	18	0
+	+	11	20
+	+	10	29
+
 > ~/AWS_Web/myticket_uwsgi.ini
-	*	1622357160	0
-	"	9	0
-	^	32	32
-	.	32	19
+	*	1622545224	0
+	"	4	0
+	^	30	1
+	.	30	0
 	+	7	0
 	+	8	0
 	+	7	0
@@ -317,23 +557,23 @@ $myticket
 	+	7	17
 	+	8	10
 	+	12	38
-	+	14	27
-	+	16	19
+	+	15	27
+	+	18	19
 	+	12	19
-	+	16	38
+	+	18	38
 	+	7	10
 	+	12	34
-	+	14	27
-	+	23	33
+	+	15	27
+	+	27	33
 	+	2	50
 	+	6	17
 	+	12	36
-	+	23	47
+	+	27	47
 	+	8	0
 	+	9	0
 	+	8	41
 	+	12	31
-	+	23	29
+	+	27	29
 	+	8	0
 	+	7	0
 	+	3	0
@@ -343,41 +583,115 @@ $myticket
 	+	4	0
 	+	9	0
 	+	4	12
-	+	32	19
+	+	37	19
+	+	30	29
+	+	33	0
+	+	32	0
+	+	35	0
+	+	28	0
+	+	25	0
+	+	22	0
+	+	16	0
+	+	13	0
+	+	30	0
 
-> ~/AWS_Web/myticket_uwsgi2.ini
-	*	1622357103	0
-	"	12	37
-	^	12	38
-	.	12	37
-	+	12	37
+> /etc/nginx/conf.d/myticket.conf
+	*	1622544076	0
+	"	24	4
+	.	19	15
+	+	19	15
 
-> /var/log/nginx/error.log
-	*	1622356863	0
+> ~/AWS_Web/category/templates/detail.htm
+	*	1622543058	0
+	"	72	7
+
+> ~/AWS_Web/category/views.py
+	*	1622537159	0
+	"	39	21
+	^	3	39
+	.	15	0
+	+	3	38
+	+	15	0
+
+> /var/log/nginx/access.log
+	*	1622536924	0
 	"	1	0
 
-> ~/AWS_Web/myticket/settings.py
-	*	1622356363	0
-	"	181	19
+> ~/AWS_Web/category/urls.py
+	*	1622536889	0
+	"	23	10
+	^	25	10
+	.	24	10
+	+	23	18
+	+	24	23
+	+	25	9
+	+	24	9
+	+	23	10
+	+	24	10
 
-> ~/AWS_Web/asdasd
-	*	1622354358	0
+> ~/AWS_Web/category/templates/index.htm
+	*	1622536707	0
+	"	26	53
+
+> ~/AWS_Web/category/models.py
+	*	1622532677	0
+	"	9	0
+	^	14	0
+	.	14	0
+	+	6	83
+	+	3	11
+	+	22	11
+	+	4	38
+	+	5	39
+	+	10	440
+	+	10	43
+	+	16	21
+	+	38	21
+	+	23	34
+	+	24	0
+	+	14	0
+
+> ~/AWS_Web/settings.py
+	*	1622531427	0
 	"	1	0
 
-> ~/second_site/second_site/wsgi.py
-	*	1622353505	0
-	"	15	0
-	.	2	0
-	+	2	0
+> ~/AWS_Web/category/migrations/0001_initial.py
+	*	1622531143	0
+	"	16	0
 
-> ~/second_site/second_site/settings.py
-	*	1622353470	0
-	"	148	14
-	.	2	0
-	+	2	0
+> category/migrations/0001_initial.py
+	*	1622530970	0
+	"	1	0
 
-> ~/second_site/manage.py
-	*	1622353424	0
-	"	9	4
-	.	9	0
-	+	9	0
+> ~/AWS_Web/category/admin.py
+	*	1622530517	0
+	"	14	20
+	^	3	47
+	.	3	47
+	+	3	47
+
+> ~/AWS_Web/myticket/secrets/secret.json
+	*	1622527164	0
+	"	6	53
+	^	6	54
+	.	6	53
+	+	6	54
+	+	1	42
+	+	2	65
+	+	4	50
+	+	6	53
+
+> /usr/share/vim/vim81/doc/help.txt
+	*	1622527149	0
+	"	1	0
+
+> ~/AWS_Web/myticket/secrets.json
+	*	1622527020	0
+	"	1	0
+
+> ~/AWS_Web/myticket/asset_starage.py
+	*	1622526126	0
+	"	6	25
+	^	4	27
+	.	4	26
+	+	4	26

@@ -1,6 +1,6 @@
 from django.http import response, HttpResponse
 from users.models import SiteUsers
-from .models import Perfomance, PerfomanceDetail
+from .models import Performance, PerformanceDetail
 from django.shortcuts import get_object_or_404, redirect, render
 from itertools import chain
 
@@ -12,7 +12,7 @@ def main(request):
   if user_id:
     datas['user_id'] = SiteUsers.objects.get(pk=user_id)
 
-  datas['performance'] = Perfomance.objects.all()
+  datas['performance'] = Performance.objects.all()
   return render(request, 'index.htm', datas)
 
 
@@ -36,8 +36,8 @@ def detail(request, title):
   
   # main,all 페이지에서 공연 클릭시 'title' 값을 전달(고유한값)
   # 공연 상세 품목을 DB에서 조회
-  a = Perfomance.objects.filter(title=title).all()
-  b = PerfomanceDetail.objects.filter(title=title).values()
+  a = Performance.objects.filter(title=title).all()
+  b = PerformanceDetail.objects.filter(title=title).values()
   datas['performance'] = a
   datas['performance_detail'] = b
   
@@ -52,8 +52,8 @@ def select_seat(request, title):
     datas['user_id'] = SiteUsers.objects.get(pk=user_id)
 
     if request.method == 'GET': # 평상시 실행되는 코드 화면만 불러옴
-      a = Perfomance.objects.filter(title=title).all()
-      b = PerfomanceDetail.objects.filter(title=title).values()
+      a = Performance.objects.filter(title=title).all()
+      b = PerformanceDetail.objects.filter(title=title).values()
       datas['performance'] = a
       datas['performance_detail'] = b
       return render(request, 'select_seat.htm', datas )
@@ -74,8 +74,8 @@ def reserved(request, title):
   
   if request.method == 'POST': # 예매하기 버튼을 눌렀을 경우 실행되는 코드
     datas['reserved'] = str(request.POST.get('seat', None)).split(':')
-    a = Perfomance.objects.filter(title=title).all()
-    b = PerfomanceDetail.objects.filter(title=title).values()
+    a = Performance.objects.filter(title=title).all()
+    b = PerformanceDetail.objects.filter(title=title).values()
     datas['performance'] = a
     datas['performance_detail'] = b
     print(a)

@@ -1,25 +1,26 @@
 from django.db import models
 
-class Perfomance(models.Model):
-  genre = models.CharField(max_length=20, verbose_name="장르")
-  title = models.CharField(max_length=50, verbose_name="제목", primary_key=True)
-  image = models.ImageField(verbose_name="공연포스터", upload_to="category/imgaes")
+class Performance(models.Model):
+  genre = models.CharField(max_length=50, verbose_name="장르")
+  title = models.CharField(max_length=100, verbose_name="제목", primary_key=True)
+  image = models.ImageField(verbose_name="공연포스터", upload_to="category/images")
   date = models.DateField(auto_now=True, verbose_name="공연날짜")
   location = models.CharField(max_length=128, verbose_name="공연장소")
   member = models.CharField(max_length=128, verbose_name="출연진")
-  overview = models.TextField(max_length=128, verbose_name="공연개요")
+  overview = models.TextField(max_length=500, verbose_name="공연개요")
 
   def __str__(self):
     return self.title
+
   class Meta:
-    db_table = 'perfomance'
+    db_table = 'performance'
     verbose_name = "공연"
     verbose_name_plural = "공연"
 
 
 
-class PerfomanceDetail(models.Model):
-  title = models.ForeignKey('Perfomance', on_delete=models.CASCADE, db_column='title')
+class PerformanceDetail(models.Model):
+  title = models.ForeignKey('Performance', on_delete=models.CASCADE, db_column='title')
 
   ageGroup = models.CharField(max_length=20, verbose_name="관람 연령")
   viewingTime = models.CharField(max_length=20, verbose_name="관람 시간")
@@ -34,6 +35,6 @@ class PerfomanceDetail(models.Model):
     return str(self.title)
 
   class Meta:
-    db_table = 'perfomance_detail'
+    db_table = 'performance_detail'
     verbose_name = "공연 상세"
     verbose_name_plural = "공연 상세"

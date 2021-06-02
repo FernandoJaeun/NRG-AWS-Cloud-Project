@@ -1,14 +1,14 @@
 from django.contrib import admin
 
-from .models import Perfomance, PerfomanceDetail
+from .models import Performance, PerformanceDetail
 
 
-class PerfomanceAdmin(admin.ModelAdmin):
+class PerformanceAdmin(admin.ModelAdmin):
   list_display = ('genre', 'title', 'date', 'location')
 
-admin.site.register(Perfomance, PerfomanceAdmin)
+admin.site.register(Performance, PerformanceAdmin)
 
-class PerfomanceDetailAdmin(admin.ModelAdmin):
+class PerformanceDetailAdmin(admin.ModelAdmin):
   list_display = ('title', 'priceVIP', 'priceR', 'priceS')
 
-admin.site.register(PerfomanceDetail, PerfomanceDetailAdmin)
+admin.site.register(PerformanceDetail, PerformanceDetailAdmin)

@@ -19,8 +19,7 @@ def login(request):
     else:
       siteUser = SiteUsers.objects.get(user_id=user_id)
       if check_password(password, siteUser.password):
-        request.session['user'] = siteUser.id # 로그인 성공, 세션 생성
-        print(request.session['user'])
+        request.session['user'] = siteUser.user_id # 로그인 성공, 세션 생성
         return redirect('main')
       else:
         responsed_data['error'] = '비밀번호를 다시 확인해주세요'

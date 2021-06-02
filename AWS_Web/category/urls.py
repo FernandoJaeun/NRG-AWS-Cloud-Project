@@ -20,7 +20,7 @@ from . import views
 app_name = 'category'
 urlpatterns = [
     path('all', views.all, name='all'),
-    path(r'^detail$/<str:title>', views.detail, name='detail'),
-    path(r'^select_seat$/<str:title>', views.select_seat, name='select_seat'),
-    path(r'^reserved$/<str:title>', views.reserved, name='reserved'),
+    path('detail/<str:title>', views.detail, name='detail'),
+    path('select_seat/<str:title>', views.select_seat, name='select_seat'),
+    path('reserved/<str:title>', views.reserved, name='reserved'),
 ]

@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5g*)lk@+)8wkvaj_4_&rfl#+bp^837y+h8!5%s3h3kv^hi_qak'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['http://test-808280491.ap-northeast-2.elb.amazonaws.com', '*']
 
@@ -93,6 +93,9 @@ DATABASES = {
         'PASSWORD': 'admin1234',                   # 해당 DB 접속 계정 비밀번호
         'HOST': 'webdb.cag27zdkajz5.ap-northeast-2.rds.amazonaws.com',                    # 실제 DB 주소, 따로 설정 안했으면 그대로 두면 됨
         'PORT': '3306',                         # 포트번호, 따로 설정 안했으면 그대로 두면 됨
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 # Password validation
@@ -131,11 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static') # 프로젝트 폴더(/)에서 static 폴더에 접근하여 정적 파일을 불러올 것이다.
 
@@ -145,42 +144,62 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # myticket/media
+if DEBUG:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+else :
+    #################### S3 설정을 위한 변수 ##############################
+    # AWS_xxx 의 변수들은 aws-S3, boto3 모듈을 위한 변수들이다.
+    from . import aws_access_tools as access
+
+    # 버킷 접속 권한 설정
+    AWS_ACCESS_KEY_ID = access.KEY_ID
+    AWS_SECRET_ACCESS_KEY = access.SECRET_KEY
+    AWS_REGION = access.AWS_REGION
+    AWS_STORAGE_BUCKET_NAME = access.AWS_BUCKET
+    #AWS_S3_CUSTOM_DOMAIN = f'{access.AWS_BUCKET}.s3.{access.AWS_REGION}.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = access.AWS_CLOUDFRONT_URL
+    # S3의 캐시 유통기한
+
+    AWS_S3_OBJECT_PARAMETERS = {
+    	'CacheControl': 'max-age=86400',
+    }
+
+    # Data 업로드 크기 제한
+    DATA_UPLOAD_MAX_MEMORY_SIZE = 1024000000 # 1GB
+    FILE_UPLOAD_MAX_MEMORY_SIZE = 1024000000
+
+    # static, media 브라우저가 파일 조회는 여기서 함
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media' 
+
+    # static, media 저장 경로(AWS_S3_CUSTOM_DOMAIN/url....)
+    STATICFILES_STORAGE = 'myticket.asset_storage.S3StaticStorage'
+    DEFAULT_FILE_STORAGE = 'myticket.asset_storage.S3DefaultStorage'
+
+    #기본 설정 경로
+    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+    #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    #######################################################################
 
 
+    ############### DynamoDB-Session 설정을 위한 변수 #####################
+    DYNAMODB_SESSIONS_AWS_REGION_NAME=access.AWS_REGION
+    DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = access.KEY_ID
+    DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = access.SECRET_KEY
+    SESSION_ENGINE = 'dynamodb_sessions.backends.dynamodb' # Django에  캐시를 안 만듦
+
+    SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+    DYNAMODB_SESSIONS_TABLE_NAME='myticket_sessions'
+    DYNAMODB_SESSIONS_TABLE_HASH_ATTRIB_NAME='session_key'
+    DYNAMODB_SESSIONS_ALWAYS_CONSISTENT=True
+    DYNAMODB_SESSIONS_BOTO_SESSION='boto3.session.Session'
+    #######################################################################
 
 
-#################### S3 설정을 위한 변수 ##############################
-# AWS_xxx 의 변수들은 aws-S3, boto3 모듈을 위한 변수들이다.
-
-# 엑세스 키와 시크릿 키는 다른 파일로 작성, 임포트하여 사용
-AWS_ACCESS_KEY_ID = 'AKIA4EBQ5XGZ4B7SMJON'
-AWS_SECRET_ACCESS_KEY = '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'
-
-AWS_REGION = 'ap-northeast-2'
-AWS_STORAGE_BUCKET_NAME = 's3forwas'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
-AWS_S3_OBJECT_PARAMETERS = {    
-    'CacheControl': 'max-age=86400',
-}   # S3의 캐시 유통기한
-AWS_DEFAULT_ACL = 'public-read'
-AWS_LOCATION = 'static'
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#######################################################################
-
-
-############### DynamoDB-Session 설정을 위한 변수 #####################
-DYNAMODB_SESSIONS_AWS_REGION_NAME='ap-northeast-2'
-DYNAMODB_SESSIONS_AWS_ACCESS_KEY_ID = 'AKIA4EBQ5XGZ4B7SMJON'
-DYNAMODB_SESSIONS_AWS_SECRET_ACCESS_KEY = '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'
-SESSION_ENGINE = 'dynamodb_sessions.backends.cached_dynamodb' # app과 DynamoDB사이에 캐시를 만들어서 쿼리를 가볍게 함
-# SESSION_ENGINE = 'dynamodb_sessions.backends.dynamodb' # 캐시를 안 만듦
-
-SESSION_EXPIRE_AT_BROWSER_CLOSE=True
-DYNAMODB_SESSIONS_TABLE_NAME='myticket_sessions'
-DYNAMODB_SESSIONS_TABLE_HASH_ATTRIB_NAME='session_key'
-DYNAMODB_SESSIONS_ALWAYS_CONSISTENT=True
-DYNAMODB_SESSIONS_BOTO_SESSION='boto3.session.Session'
-#######################################################################
+    #STATIC_URL = '/static/'  # s3가 참조할 django의 static 디렉터리 경로
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    #MEDIA_URL = '/media/'   # s3가 참조할 django의 media 디렉터리 경로
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # myticket/media
