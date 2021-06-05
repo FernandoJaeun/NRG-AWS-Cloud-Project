@@ -172,8 +172,8 @@ else :
     FILE_UPLOAD_MAX_MEMORY_SIZE = 1024000000
 
     # static, media 브라우저가 파일 조회는 여기서 함
-    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static'
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media' 
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/' 
 
     # static, media 저장 경로(AWS_S3_CUSTOM_DOMAIN/url....)
     STATICFILES_STORAGE = 'myticket.asset_storage.S3StaticStorage'

@@ -752,3 +752,132 @@ source venv_AWS_Web/bin/activate
 python AWS_Web/manage.py collectstatic
 sudo systemctl restart nginx 
 sudo systemctl restart uwsgi.service
+ls -al
+git add .
+git status
+ls -al
+git rm -r --cached .
+git status
+git add .
+git status
+git status | grep aws_access
+vi .gitignore 
+git rm -r --cached .
+git rm -rf --cached .
+git add .
+git status
+git status | grep aws_access
+git remote -v
+git push origin
+git push origin master
+git remote add origin https://github.com/FernandoJaeun/NRG-AWS-Cloud-Project4.git
+git push origin master
+git remove origin master
+git remote remove origin
+git remote add origin https://github.com/FernandoJaeun/NRG-AWS-Cloud-Project4.git
+git push origin master
+git remote
+git remote -v
+git commit -m "DJango-uWSGI-nginx-MYSQL-S3(CloudFront)-DyanmoDB"
+git push origin master
+git remote rm 
+git remote rm master
+git remote rm origi
+git remote -v
+git remote add origin https://github.com/FernandoJaeun/NRG-AWS-Cloud-Project4.git
+git push origin master
+git remote show origin
+git branch -M main
+git push origin main
+sudo vi AWS_Web/myticket/aws_access_tools.py
+git add .
+gti status
+git status
+git rm -rf --cached .
+git add .
+git status
+git commit -m "DJango-uWSGI-nginx-MYSQL-S3(CloudFront)-DyanmoDB"
+git status
+git remote -v
+git push origin main
+update-alternatives --config python
+ls -al /bin/
+ls -al /bin/ | grep python
+ls -al /user/bin/ | grep pytho
+ls -al /usr/bin | grep python
+ls -al /usr/local/bin | grep python
+ls -al
+sud vi AWS_Web/myticket/aws_access_tools.py
+sudo vi AWS_Web/myticket/aws_access_tools.py
+sudo systmeclt restart nginx
+sudo systemclt restart nginx
+sudo systemctt restart nginx
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi.service 
+sudo vi AWS_Web/myticket/aws_access_tools.py
+ls
+source venv_AWS_Web/bin/activate
+mysql -v
+mysql
+mysql --version
+mysqlclient' --version
+;
+mysqlclient' --version
+;
+mysqlclient --version
+
+mysqlclient --version
+find / -name mysqlclient'
+find / -name mysqlclient
+sudo find / -name mysqlclient
+mysqlclient --version
+mysql --version
+exit
+ls
+sudo systemctl status nginx
+sudo systemctl status uwsgi.service 
+sudi vi /etc/nginx/nginx.conf 
+sudo vi /etc/nginx/nginx.conf 
+sudo vi /etc/nginx/conf.d/myticket.conf 
+sudo vi /etc/systemd/system/uwsgi.service
+vi AWS_Web/myticket/settings.py 
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi.service 
+ls
+vi AWS_Web/category/templates/base.htm 
+vi AWS_Web/category/templates/index.htm
+vi AWS_Web/category/templates/base.htm 
+vi AWS_Web/category/templates/
+vi AWS_Web/category/templates/base.htm 
+vi AWS_Web/myticket/settings.py 
+sudo systemctl restart uwsgi.service
+sudo systemctl restart nginx
+do vi /etc/nginx/conf.d/myticket.conf 
+sudo vi /etc/nginx/conf.d/myticket.conf 
+cd AWS_Web/
+vi category/static/css/bootstrap.min.css
+vi category/templates/detail.htm
+source ../venv_AWS_Web/bin/activate
+python manage.py collectstatic
+vi myticket/settings.py e
+vi myticket/settings.py
+python manage.py collectstatic
+vi myticket/settings.py
+vi static/css/bootstrap.min.css 
+python manage.py collectstatic
+vi myticket/settings.py
+vi myticket/asset_storage.py 
+python manage.py collectstatic
+sudo systemctl restart uwsgi.service 
+ssh 10.0.5.96
+clear
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+sudo su -
+exit
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install stress -y
+stress --cpu 2 --timeout 1200
+pip3 install locust
+vi locustfile.py
+locust -f ./locustfile.py — host=https://api.sunshower.app
